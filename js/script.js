@@ -17,8 +17,7 @@ function mostrarUsuario(nombre){
                     // resultado.innerHTML =  respuesta.respuesta.salida;
                     resultado.innerHTML =  xmlhttp.responseText;
                }
-          }
-          
+          }          
           xmlhttp.send();
      }
 }

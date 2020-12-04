@@ -78,7 +78,7 @@
                             type="text"
                             name="name" 
                             class="form-control" 
-                            value=<?php echo $name?>  ""
+                            value="<?php echo $name?>" 
                             placeholder= "Nombres"  
                             style = "resize:none;"
                             required>                 
@@ -89,7 +89,7 @@
                             type="text"
                             name="lastname" 
                             class="form-control" 
-                            value= <?php echo $lastname?> ""
+                            value= "<?php echo $lastname?>" 
                             placeholder="Apellidos" 
                             style = "resize:none;"
                             required>                            
@@ -100,7 +100,7 @@
                             type="text" 
                             name="secretary" 
                             class="form-control" 
-                            value=<?php echo $secretary?> ""
+                            value="<?php echo $secretary?>" 
                             placeholder="Secretaría" 
                             style = "resize:none;" 
                             required>                            
@@ -111,7 +111,7 @@
                             type="text" 
                             name="contract_expiration" 
                             class="form-control" 
-                            value=<?php echo $contract_expiration?> ""
+                            value="<?php echo $contract_expiration?>" 
                             placeholder="Fecha de expiración del contrato" 
                             onfocus="(this.type='date')"
                             onfocusout="(this.type='text')"
@@ -124,7 +124,7 @@
                             type="number" 
                             name="phone" 
                             class="form-control" 
-                            value=<?php echo $phone?> ""
+                            value="<?php echo $phone?>"  
                             placeholder="Número telefonico" 
                             style = "resize:none;" 
                             required>                            
@@ -135,7 +135,7 @@
                             type="email" 
                             name="email" 
                             class="form-control" 
-                            value=<?php echo $email?> ""
+                            value="<?php echo $email?>"  
                             placeholder="Correo electrónico" 
                             style = "resize:none;" 
                             required>                            
@@ -146,7 +146,7 @@
                             type="text" 
                             name="contract_supervisor" 
                             class="form-control" 
-                            value=<?php echo $contract_supervisor?> ""
+                            value="<?php echo $contract_supervisor?>" 
                             placeholder="Supervisor de contrato" 
                             style = "resize:none;" 
                             required>                            
@@ -157,7 +157,7 @@
                             type="text" 
                             name="project" 
                             class="form-control" 
-                            value=<?php echo $project?> ""
+                            value="<?php echo $project?>" 
                             placeholder="Proyecto" 
                             style = "resize:none;" 
                             required>                            
@@ -168,7 +168,7 @@
                             type="text" 
                             name="program" 
                             class="form-control" 
-                            value=<?php echo $program?> ""
+                            value="<?php echo $program?>" 
                             placeholder="Programa o convenio" 
                             style = "resize:none;" 
                             required>                            
@@ -179,7 +179,7 @@
                             type="text" 
                             name="dependency" 
                             class="form-control" 
-                            value=<?php echo $dependency?> ""
+                            value="<?php echo $dependency?>"
                             placeholder="Dependencia" 
                             style = "resize:none;" 
                             required>                            
@@ -190,7 +190,7 @@
                             type="text" 
                             name="job_title" 
                             class="form-control" 
-                            value=<?php echo $job_title?> ""
+                            value="<?php echo $job_title?>"
                             placeholder="Cargo" 
                             style = "resize:none;" 
                             required>                            
@@ -201,7 +201,7 @@
                             type="text" 
                             name="type_of_bonding" 
                             class="form-control" 
-                            value=<?php echo $type_of_bonding?> ""
+                            value="<?php echo $type_of_bonding?>"
                             placeholder="Tipo de vinculación" 
                             style = "resize:none;" 
                             required>                                                           
