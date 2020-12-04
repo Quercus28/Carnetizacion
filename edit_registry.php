@@ -26,6 +26,7 @@
             $dependency = $row['dependency'];
             $job_title = $row['job_title'];
             $type_of_bonding = $row['type_of_bonding'];
+            
         }
     }
 
@@ -71,6 +72,7 @@
             <div class="card card-body">
                 <form action="edit_registry.php?id=<?php echo $_GET['id'];?>" method="POST">
                     <div class="form-group">
+                    <label for="name">Nombre: </label>   
                     <input
                         textarea
                             type="text"
@@ -82,6 +84,7 @@
                             required>                 
                     </div>
                     <div class="form-group">
+                    <label for="lastname">Apellidos: </label>
                         <input 
                             type="text"
                             name="lastname" 
@@ -92,6 +95,7 @@
                             required>                            
                     </div>        
                     <div class="form-group">
+                    <label for="secretary">Secretaria: </label>
                         <input
                             type="text" 
                             name="secretary" 
@@ -102,6 +106,7 @@
                             required>                            
                     </div>
                     <div class="form-group">
+                    <label for="contract_expiration">Fecha de vencimiento: </label>
                         <input
                             type="text" 
                             name="contract_expiration" 
@@ -114,6 +119,7 @@
                             required>                            
                     </div>
                     <div class="form-group">
+                    <label for="phone">Telefono: </label>
                         <input
                             type="number" 
                             name="phone" 
@@ -124,6 +130,7 @@
                             required>                            
                     </div>
                     <div class="form-group">
+                    <label for="email">Correo: </label>
                         <input
                             type="email" 
                             name="email" 
@@ -134,6 +141,7 @@
                             required>                            
                     </div>
                     <div class="form-group">
+                    <label for="contract_supervisor">Supervisor de contrato: </label>
                         <input
                             type="text" 
                             name="contract_supervisor" 
@@ -144,6 +152,7 @@
                             required>                            
                     </div>
                     <div class="form-group">
+                    <label for="project">Proyecto: </label>
                         <input
                             type="text" 
                             name="project" 
@@ -154,6 +163,7 @@
                             required>                            
                     </div>
                     <div class="form-group">
+                    <label for="program">Programa: </label>
                         <input
                             type="text" 
                             name="program" 
@@ -164,6 +174,7 @@
                             required>                            
                     </div>
                     <div class="form-group">
+                    <label for="dependency">Dependencia: </label>
                         <input
                             type="text" 
                             name="dependency" 
@@ -174,6 +185,7 @@
                             required>                            
                     </div>
                     <div class="form-group">
+                        <label for="job_title">Cargo: </label>
                         <input
                             type="text" 
                             name="job_title" 
@@ -184,6 +196,7 @@
                             required>                            
                     </div>
                     <div class="form-group">    
+                    <label for="type_of_bonding">Tipo de vinculacion: </label>
                         <input
                             type="text" 
                             name="type_of_bonding" 
@@ -193,8 +206,13 @@
                             style = "resize:none;" 
                             required>                                                           
                     </div>
+
+
                     
                     <input type="submit" class="btn btn-light  btn-block" name="update" value="Guardar"></input>
+                    <!-- se agregan como links las opciones de editar y eliminar desde  -->
+                    <!-- <a href="edit_registry.php?id=<?php echo $id?>" class="btn btn-light btn-block" title="Editar">Editar</a>                    -->
+                    <a href="delete_registry.php?id=<?php echo $id?>" class="btn btn-light btn-block" title="Eliminar">Eliminar</a>
                 </form>
             </div>
         </div>
@@ -204,8 +222,8 @@
 </div>
 
 
-    <form action ="indexlog.php"  method="POST" class= "text-center ">
-    <input type = "submit" name= "ppal" value = "Volver al menú principal"  style="color:black"></input>
+    <form action ="activo_carnet.php"  method="POST" class= "text-center ">
+    <input type = "submit" name= "ppal" value = "Volver al listado"  style="color:black"></input>
     </form><br><br><br><br><br><br><br>
 
 

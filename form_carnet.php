@@ -153,6 +153,7 @@
 
 
                     <input type="submit" class="btn btn-light  btn-block" name="save" value="Guardar"></input>
+                    
                 </form>
             </div>
         </div>
@@ -161,20 +162,25 @@
         </div>
     </div>
 </div>
+    <div class="container p-4">
+        <div class="roow">
+            <div class="col-mod-4">
+                <form action ="indexlog.php" method="POST" class= "text-center ">
+                    <input type = "submit" class="btn btn-light btn-block" name= "ppal" value = "Volver al menú principal"  style="color:black"></input>
+               </form>
+            </div>
+        </div>         
+    </div> 
 
 
-<?php 
 
-    if(isset($_POST['login'])) {?>
-        <form action ="indexlog.php" method="POST" class= "text-center ">
-            <input type = "submit" name= "ppal" value = "Volver al menú principal"  style="color:black"></input>
-        </form>
+
 <?php        
-    }
+    
     if(isset($_POST['nologin'])) {?>
 
         <form action ="index.php" method="POST" class= "text-center ">
-            <input type = "submit" name= "ppal" value = "Volver al menú principal"  style="color:black"></input>
+        <input type = "submit" class="btn btn-light btn-block" name= "ppal" value = "Volver al menú principal"  style="color:black"></input>
         </form>
 
 <?php   
