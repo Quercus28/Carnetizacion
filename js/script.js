@@ -1,4 +1,4 @@
-var resultado = document.getElementById("info");
+
 
 function mostrarUsuario(nombre){
      
@@ -13,11 +13,15 @@ function mostrarUsuario(nombre){
           xmlhttp.onload = function() {
 
                if(xmlhttp.readyState === 4 && this.status === 200) {
-                    // const respuesta = JSON.parse(xmlhttp.responseText);
-                    // resultado.innerHTML =  respuesta.respuesta.salida;
-                    resultado.innerHTML =  xmlhttp.responseText;
+                    // document.getElementById('info').innerHTML = xmlhttp.responseText;
+
+                    var i = xmlhttp.responseText;
+                    var m = i.slice(700,);
+                    document.getElementById('info').innerHTML = m;
+
                }
           }          
           xmlhttp.send();
      }
+     
 }

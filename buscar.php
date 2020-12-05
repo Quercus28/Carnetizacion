@@ -8,7 +8,6 @@ $salida = "";
 
 if(!empty($nombre)){
      $persona = mysqli_real_escape_string($conn, $nombre);
-     $resultadoBD = mysqli_query($conn, "SELECT * FROM reportes WHERE name LIKE '%".$persona."%' OR id LIKE '%".$persona."%' OR lastname LIKE '%".$persona."%' OR email LIKE '%".$persona."%'" );
 
      $query = "SELECT * FROM reportes WHERE name LIKE '%".$persona."%' OR id LIKE '%".$persona."%' OR lastname LIKE '%".$persona."%' OR email LIKE '%".$persona."%'";
 
@@ -44,28 +43,13 @@ if(!empty($nombre)){
      $salida.="</tbody></table>";
 
      } else {
-          $salida.="No se encontro registro";
+          $salida.="<h1 align='center' margin='20px' >Informacion no encontrada</h1>";
      }
 
      echo $salida;
-     // $respuesta = array(
-     //      'salida' => $salida
-     // );
-
-     // echo json_encode($respuesta);
 
 }
 
-// if(!empty($nombre)){
-//      $persona = mysqli_real_escape_string($conn, $nombre);
-//      $resultadoBD = mysqli_query($conn, " SELECT * FROM reportes WHERE name LIKE '%".$persona."%' OR id LIKE '%".$persona."%' OR lastname LIKE '%".$persona."%' OR email LIKE '%".$persona."%'");
-
-//      while($fila = mysqli_fetch_assoc($resultadoBD)){
-//           echo $fila['name'] . " ";
-//      }
-
-//      mysqli_close($conn);
-// }
 
 
 ?>

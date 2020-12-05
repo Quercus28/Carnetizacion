@@ -11,19 +11,23 @@
         <a> Nombre página </a>
     </header><br><br>
 
+    <!-- barra de busqueda -->
     <form action="" method="POST" style= "padding-left:15%;">    
         <div class="container-fluid">
             <div class="row" id="map_section">
                 <div class="col-4">
                 <label for="formulario">Buscar usuario: </label>
-                <input type="text" onkeyup="mostrarUsuario(this.value)" class="form-control my-2" name="formulario" id="formulario" placeholder = "  Identificación">
+                <input type="text" autocomplete="off" onkeyup="mostrarUsuario(this.value)" class="form-control my-2" name="formulario" id="formulario" placeholder = "  Identificación">
                 <!-- <button id="boton" class="btn btn-info mb-2">Buscar</button> -->
                 </div>
             </div>
         </div>    
     </form><br>
+    <!-- cierre barra de busqueda -->
 
-    <div id="info"></div>
+    <div id="info">
+        
+    </div>
     
 
     <h1 align="center" style="margin: 20px 0";>Funcionarios y Contratistas</h1>
