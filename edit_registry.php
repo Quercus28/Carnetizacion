@@ -26,6 +26,7 @@
             $dependency = $row['dependency'];
             $job_title = $row['job_title'];
             $type_of_bonding = $row['type_of_bonding'];
+            
         }
     }
 
@@ -71,42 +72,46 @@
             <div class="card card-body">
                 <form action="edit_registry.php?id=<?php echo $_GET['id'];?>" method="POST">
                     <div class="form-group">
+                    <label for="name">Nombre: </label>   
                     <input
                         textarea
                             type="text"
                             name="name" 
                             class="form-control" 
-                            value=<?php echo $name?>  ""
+                            value="<?php echo $name?>" 
                             placeholder= "Nombres"  
                             style = "resize:none;"
                             required>                 
                     </div>
                     <div class="form-group">
+                    <label for="lastname">Apellidos: </label>
                         <input 
                             type="text"
                             name="lastname" 
                             class="form-control" 
-                            value= <?php echo $lastname?> ""
+                            value= "<?php echo $lastname?>" 
                             placeholder="Apellidos" 
                             style = "resize:none;"
                             required>                            
                     </div>        
                     <div class="form-group">
+                    <label for="secretary">Secretaria: </label>
                         <input
                             type="text" 
                             name="secretary" 
                             class="form-control" 
-                            value=<?php echo $secretary?> ""
+                            value="<?php echo $secretary?>" 
                             placeholder="Secretaría" 
                             style = "resize:none;" 
                             required>                            
                     </div>
                     <div class="form-group">
+                    <label for="contract_expiration">Fecha de vencimiento: </label>
                         <input
                             type="text" 
                             name="contract_expiration" 
                             class="form-control" 
-                            value=<?php echo $contract_expiration?> ""
+                            value="<?php echo $contract_expiration?>" 
                             placeholder="Fecha de expiración del contrato" 
                             onfocus="(this.type='date')"
                             onfocusout="(this.type='text')"
@@ -114,87 +119,100 @@
                             required>                            
                     </div>
                     <div class="form-group">
+                    <label for="phone">Telefono: </label>
                         <input
                             type="number" 
                             name="phone" 
                             class="form-control" 
-                            value=<?php echo $phone?> ""
+                            value="<?php echo $phone?>"  
                             placeholder="Número telefonico" 
                             style = "resize:none;" 
                             required>                            
                     </div>
                     <div class="form-group">
+                    <label for="email">Correo: </label>
                         <input
                             type="email" 
                             name="email" 
                             class="form-control" 
-                            value=<?php echo $email?> ""
+                            value="<?php echo $email?>"  
                             placeholder="Correo electrónico" 
                             style = "resize:none;" 
                             required>                            
                     </div>
                     <div class="form-group">
+                    <label for="contract_supervisor">Supervisor de contrato: </label>
                         <input
                             type="text" 
                             name="contract_supervisor" 
                             class="form-control" 
-                            value=<?php echo $contract_supervisor?> ""
+                            value="<?php echo $contract_supervisor?>" 
                             placeholder="Supervisor de contrato" 
                             style = "resize:none;" 
                             required>                            
                     </div>
                     <div class="form-group">
+                    <label for="project">Proyecto: </label>
                         <input
                             type="text" 
                             name="project" 
                             class="form-control" 
-                            value=<?php echo $project?> ""
+                            value="<?php echo $project?>" 
                             placeholder="Proyecto" 
                             style = "resize:none;" 
                             required>                            
                     </div>
                     <div class="form-group">
+                    <label for="program">Programa: </label>
                         <input
                             type="text" 
                             name="program" 
                             class="form-control" 
-                            value=<?php echo $program?> ""
+                            value="<?php echo $program?>" 
                             placeholder="Programa o convenio" 
                             style = "resize:none;" 
                             required>                            
                     </div>
                     <div class="form-group">
+                    <label for="dependency">Dependencia: </label>
                         <input
                             type="text" 
                             name="dependency" 
                             class="form-control" 
-                            value=<?php echo $dependency?> ""
+                            value="<?php echo $dependency?>"
                             placeholder="Dependencia" 
                             style = "resize:none;" 
                             required>                            
                     </div>
                     <div class="form-group">
+                        <label for="job_title">Cargo: </label>
                         <input
                             type="text" 
                             name="job_title" 
                             class="form-control" 
-                            value=<?php echo $job_title?> ""
+                            value="<?php echo $job_title?>"
                             placeholder="Cargo" 
                             style = "resize:none;" 
                             required>                            
                     </div>
                     <div class="form-group">    
+                    <label for="type_of_bonding">Tipo de vinculacion: </label>
                         <input
                             type="text" 
                             name="type_of_bonding" 
                             class="form-control" 
-                            value=<?php echo $type_of_bonding?> ""
+                            value="<?php echo $type_of_bonding?>"
                             placeholder="Tipo de vinculación" 
                             style = "resize:none;" 
                             required>                                                           
                     </div>
+
+
                     
                     <input type="submit" class="btn btn-light  btn-block" name="update" value="Guardar"></input>
+                    <!-- se agregan como links las opciones de editar y eliminar desde  -->
+                    <!-- <a href="edit_registry.php?id=<?php echo $id?>" class="btn btn-light btn-block" title="Editar">Editar</a>                    -->
+                    <a href="delete_registry.php?id=<?php echo $id?>" class="btn btn-light btn-block" title="Eliminar">Eliminar</a>
                 </form>
             </div>
         </div>
@@ -204,8 +222,8 @@
 </div>
 
 
-    <form action ="indexlog.php"  method="POST" class= "text-center ">
-    <input type = "submit" name= "ppal" value = "Volver al menú principal"  style="color:black"></input>
+    <form action ="activo_carnet.php"  method="POST" class= "text-center ">
+    <input type = "submit" name= "ppal" value = "Volver al listado"  style="color:black"></input>
     </form><br><br><br><br><br><br><br>
 
 

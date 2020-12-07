@@ -12,6 +12,8 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
         crossorigin="anonymous"
     >
+    
+    
 
     <header class="page-header  text-center pt-3" style="background-color:#c79be0;font-size:30px; color:white">
         <a>Carnetización icopo</a>        
