@@ -5,6 +5,7 @@
     <meta name="viewport" 
         content="width=device-width, initial-scale=1.0"
     >
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!--BOOTSTRAP 4-->
     <link rel="stylesheet" 
@@ -13,8 +14,12 @@
         crossorigin="anonymous"
     >
     
-    
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
 
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+    
     <header class="page-header  text-center pt-3" style="background-color:#c79be0;font-size:30px; color:white">
         <a>Carnetización icopo</a>        
     </header>
