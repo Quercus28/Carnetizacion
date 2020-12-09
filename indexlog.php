@@ -9,7 +9,7 @@
 
 
     <div class="container p-4 text-center">
-    <form action ="form_carnet.php"  method="POST">
+    <form action ="form_official.php"  method="POST">
     <input type = "submit" name= "login" value = "formulario"  style="background-color:#DCDCDC; border-color:black; color:black"  class="btn btn-lg"></input>
     </form>
     </div>
@@ -32,9 +32,8 @@
     <input type = "submit" name= "print" value = "imprimir carné"  style="background-color:#DCDCDC; border-color:black; color:black"  class="btn btn-lg "></input>
     </form>
     </div>
-    
+
 
 <?php
     include("includes/footer.php");
 ?>
-   
