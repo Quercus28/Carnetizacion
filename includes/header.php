@@ -13,6 +13,13 @@
         crossorigin="anonymous"
     >
     
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="vendor/jquery-ui/jquery-ui.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
     
 
     <header class="page-header  text-center pt-3" style="background-color:#c79be0;font-size:30px; color:white">
