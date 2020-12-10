@@ -105,16 +105,7 @@
                         </div>
 
                         
-                        <!--<div class="form-group">
-                            <label for="email">Correo Electrónico*</label>
-                            <input
-                                type="email"
-                                name="in_email"
-                                class="form-control"
-                                placeholder="Correo electrónico"
-                                style = "resize:none;"
-                                required>
-                        </div>-->
+                       
                         <div class="form-group">
                             <input
                                 type="number"
@@ -127,7 +118,7 @@
                         
                         <div class="form-row">
                             <div class="form-group">
-                        <!-- <label for="tipo">Cargo*</label>-->
+                         <label for="tipo">Cargo*</label>
                             <div class="select-list1">
                                 <select name="in_job_title" id="tipo" required>
                                             <option value="NG">Seleccione el Cargo:</option>
@@ -183,6 +174,7 @@
                             </div>
                     
                         <div class="form-group">
+                        <label for="tipo">Secretaría*</label>
                             <div class="select-list1">
                                 <select name="in_secretary" id="tipo" required>
                                             <option value="NG">Seleccione la secretaría:</option>
