@@ -74,18 +74,33 @@
 
                             </div>
                         </div>
-
+             <div class="form-row">
                 <div class="form-group" >
-                            <label for="in_identification">Número de Identificación</label>
+                            <label for="in_identification">Número de cédula.*</label>
                             <input
                                 type="number"
                                 name="in_identification"
                                 class="form-input"
-                                style = "resize:none;"
+                               
                                 required>
+                                <label for="Cedula">Sin espacios; comas ni puntos*</label>
                         </div>
-
-
+                       <!-- <div class="form-group">
+                                <label for="Telefono">Número de telefónico de contacto.*</label>
+                                <input type="text" class="form-input" name="Telefono" id="caja" />
+                                <label for="Telefono">- Celular*</label>
+                            </div>-->
+                            <div class="form-group">
+                            <label for="in_phone">Número de telefónico de contacto.*</label>
+                            <input
+                                type="number"
+                                name="in_phone"
+                                class="form-input"
+                                id="caja"
+                                 required>
+                                <label for="in_phone">- Celular*</label>
+                        </div>
+             </div>
                         <div class="form-group">
                             <input
                                 type="text"
@@ -107,15 +122,7 @@
 
                         
                        
-                        <div class="form-group">
-                            <input
-                                type="number"
-                                name="in_phone"
-                                class="form-control"
-                                placeholder="Número de teléfono celular"
-                                style = "resize:none;"
-                                required>
-                        </div>
+                      
                         
                         <div class="form-row">
                             <div class="form-group">
