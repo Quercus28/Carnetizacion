@@ -69,6 +69,7 @@
                             <div class="form-group">
                                 <label for="Costo">Costo</label>
                                 <input type="text" disabled=disabled class="form-input" name="Costo" id="caja"/>
+                                
 
 
                             </div>
