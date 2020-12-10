@@ -10,20 +10,26 @@
 
     <div class="container p-4 text-center">
     <form action ="form_official.php"  method="POST">
-    <input type = "submit" name= "login" value = "formulario"  style="background-color:#DCDCDC; border-color:black; color:black"  class="btn btn-lg"></input>
+    <input type = "submit" name= "login" value = "formulario Funcionario"  style="background-color:#DCDCDC; border-color:black; color:black"  class="btn btn-lg"></input>
+    </form>
+    </div>
+
+    <div class="container p-4 text-center">
+    <form action ="form_contractor.php"  method="POST">
+    <input type = "submit" name= "login" value = "formulario Contratista"  style="background-color:#DCDCDC; border-color:black; color:black"  class="btn btn-lg"></input>
     </form>
     </div>
 
 
     <div class="container p-4 text-center">
     <form action ="activo_carnet.php"  method="POST" >
-    <input type = "submit" name= "list" value = "Listar"  style="background-color:#DCDCDC; border-color:black; color:black"  class="btn btn-lg "></input>
+    <input type = "submit" name= "list" value = "Listar Funcionarios"  style="background-color:#DCDCDC; border-color:black; color:black"  class="btn btn-lg "></input>
     </form>
     </div>
 
     <div class="container p-4 text-center">
-    <form action ="activo_carnet.php"  method="POST" >
-    <input type = "submit" name= "list" value = "Consultar registro"  style="background-color:#DCDCDC; border-color:black; color:black"  class="btn btn-lg "></input>
+    <form action ="listar_contractor.php"  method="POST" >
+    <input type = "submit" name= "list" value = "Listar Contratistas"  style="background-color:#DCDCDC; border-color:black; color:black"  class="btn btn-lg "></input>
     </form>
     </div>
 
