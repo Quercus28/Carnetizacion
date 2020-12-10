@@ -31,17 +31,19 @@
         }
     </style>
 
-    <div class="container p- 4">
-        <div class="row">
+    <div class="signup">
+        <div class="row"  align="center">
             <div class="center" align="center">
-                <div class="card card-body">
-                    <form action="login.php" method="POST">
-                        <legend>Ingresar:</legend>
+                <div class="card card-body"  align="center">
+                    <form action="login.php" method="POST" >
+                        <legend  align="center">Ingresar:</legend>
                         <br>
                         <input
                             type="password"
                             name="password"
+                            class="zmdi zmdi-account material-icons-name"
                             class="form-control"
+                            class="zmdi zmdi-account material-icons-name"
                             placeholder="Constraseña"
                             style = "resize:none;"
                             required>
