@@ -3,8 +3,8 @@
     include("includes/header.php")
 ?>
 
-<header class="page-header font-small text-center pt-4 pb-3" style="background-color:#c79be0; color:white" >
-    <a> Formulario </a>
+<header class="page-header font-small text-center pt-4 pb-3" style="background-color:#0E8EC9; color:white" >
+   
 </header>
 
 <div class="main">
@@ -22,12 +22,59 @@
         <div class="container">
             <fieldset>
             <legend>
-                Formulario de Contratista
+                Formulario de Servidor Publico
             </legend> 
             <div class="signup-content">
-                <form action="save_official.php" method="POST" class="signup-form">
+                <form action="save_official.php" method="POST" id="signup-form" class="signup-form">
                         
-                        <div class="form-group" >
+                <div class="form-group">
+                            <label for="email">Correo Electrónico*</label>
+                            <input 
+                            type="email" 
+                            name="in_email" 
+                            class="form-control"
+                            id="email"
+                            required>
+                        </div>  
+                        
+                        
+                        <!--falta revisar este selec nuevo-->
+                        <div class="form-group"> 
+                            <label for="caja">¿Desea tomarse la foto?</label>
+                            <div class="select-list1">
+                                <select name="caja" id="caja" required>
+                                    <option value="NG">Seleccione una opción</option>
+                                    <option value="SI">Si</option>
+                                    <option value="NO">No</option>
+                                </select>
+                            </div>
+                            <label for="">- En caso de que desee y autorice usar la foto del año actual, elija la opción "NO"*</label>
+                        </div>
+                         <!--falta revisar este selec nuevo-->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="tipo">Tipo de carnet que desea*</label>
+                                <div class="select-list1">
+                                    <select name="tipo" id="tipo" required>
+                                        <option value="NG">Seleccione una opción de carnet que desea:</option>
+                                        <option value="carnet">Solo carnet</option>
+                                        <option value="completo">Carnet, porta - carnet y cinta</option>
+                                        <option value="copia">Copia de solo carnet</option>
+                                        <option value="copiacompleto">Copia de carnet, porta - carnet y cinta</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            
+                            <div class="form-group">
+                                <label for="Costo">Costo</label>
+                                <input type="text" disabled=disabled class="form-input" name="Costo" id="caja"/>
+
+
+                            </div>
+                        </div>
+
+                <div class="form-group" >
                             <label for="in_identification">Número de Identificación</label>
                             <input
                                 type="number"
@@ -56,7 +103,10 @@
                                 style = "resize:none;"
                                 required>
                         </div>
-                        <div class="form-group">
+
+                        
+                        <!--<div class="form-group">
+                            <label for="email">Correo Electrónico*</label>
                             <input
                                 type="email"
                                 name="in_email"
@@ -64,7 +114,7 @@
                                 placeholder="Correo electrónico"
                                 style = "resize:none;"
                                 required>
-                        </div>
+                        </div>-->
                         <div class="form-group">
                             <input
                                 type="number"

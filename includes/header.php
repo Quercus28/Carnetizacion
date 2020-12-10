@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/style.css">
     
 
-    <header class="page-header  text-center pt-3" style="background-color:#c79be0;font-size:30px; color:white">
+    <header class="page-header  text-center pt-3" style="background-color:#0E8EC9;font-size:30px; color:white">
         <a>Carnetización icopo</a>        
     </header>
 
