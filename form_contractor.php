@@ -4,7 +4,7 @@
 ?>
 
 <header class="page-header font-small text-center pt-4 pb-3" style="background-color:#c79be0; color:white" >
-    <a> Formulario Funcionario</a>
+    <a> Formulario Contratista</a>
 </header>
 
 <div class="container p-4">
@@ -21,7 +21,7 @@
             <?php } ?>
 
             <div class="card card-body">
-                <form action="save_official.php" method="POST">
+                <form action="save_contractor.php" method="POST">
                     <div class="form-group">
                         <input
                             type="number"
@@ -121,6 +121,15 @@
                             style = "resize:none;"
                             required>
                     </div>
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            name="in_project"
+                            class="form-control"
+                            placeholder="Proyecto"
+                            style = "resize:none;"
+                            required>
+                    </div>
                     <input type="submit" class="btn btn-light  btn-block" name="save" value="Guardar"></input>
                 </form>
             </div>
@@ -130,6 +139,7 @@
         </div>
     </div>
 </div>
+
 <?php
     if(isset($_POST['nologin'])) {?>
         <div class="container p-4">

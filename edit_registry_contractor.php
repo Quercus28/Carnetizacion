@@ -2,57 +2,31 @@
     include("BD/db.php");
 
     // var_dump($_GET['id']);
+    // var_dump($_GET);
+
     if (isset($_GET['id']))
     {
-        $id = $_GET['id'];
+        $id = $_GET['id'];      
 
-        $query = "SELECT * FROM reportes WHERE id = $id";
+        $query = "SELECT * FROM contractor WHERE Identification = $id";
         $result = mysqli_query($conn, $query);
 
         if(mysqli_num_rows($result) == 1)
         {
             $row = mysqli_fetch_array($result);
 
-            $id = $row['id'];
-            $name = $row['name'];
-            $lastname = $row['lastname'];
-            $secretary = $row['secretary'];
-            $contract_expiration = $row['contract_expiration'];
-            $phone = $row['phone'];
-            $email = $row['email'];
-            $contract_supervisor = $row['contract_supervisor'];
-            $project = $row['project'];
-            $program = $row['program'];
-            $dependency = $row['dependency'];
-            $job_title = $row['job_title'];
-            $type_of_bonding = $row['type_of_bonding'];
-
+            $id = $row['Identification'];
+            $name = $row['Name'];
+            $lastname = $row['LastName'];
+            $secretary = $row['Secretary'];
+            $phone = $row['Phone'];
+            $email = $row['Email'];
+            $project = $row['Project'];
+            $job_title = $row['JobTitle'];
         }
     }
-    if(isset($_POST['update']))
-    {
-        $id = $_GET['id'];
-        $name = $_POST['name'];
-        $lastname = $_POST['lastname'];
-        $secretary = $_POST['secretary'];
-        $contract_expiration = $_POST['contract_expiration'];
-        $phone = $_POST['phone'];
-        $email = $_POST['email'];
-        $contract_supervisor = $_POST['contract_supervisor'];
-        $project = $_POST['project'];
-        $program = $_POST['program'];
-        $dependency = $_POST['dependency'];
-        $job_title = $_POST['job_title'];
-        $type_of_bonding = $_POST['type_of_bonding'];
-
-        $query = "UPDATE reportes set name = '$name', lastname = '$lastname', secretary = '$secretary', contract_expiration = $contract_expiration,
-        phone = '$phone', email = '$email', contract_supervisor = '$contract_supervisor', project = '$project', program = '$program', dependency = '$dependency',
-        job_title = '$job_title', type_of_bonding = '$type_of_bonding'  WHERE id = $id ";
-        mysqli_query($conn, $query);
-
-        header('Location:activo_carnet.php');
-        exit();
-    }
+    
+ 
 ?>
 
 <?php
@@ -61,7 +35,7 @@
 ?>
 
     <header class="page-header font-small text-center pt-4 pb-3" style="background-color:#c79be0; color:white" >
-        <a> Nombre página </a>
+        <a> Formulario contratista </a>
     </header>
 
 
@@ -69,11 +43,21 @@
     <div class="roow">
         <div class="col-mod-4">
             <div class="card card-body">
-                <form action="edit_registry.php?id=<?php echo $_GET['id'];?>" method="POST">
+                <form action="update_contractor.php?id=<?php echo $_GET['id'];?>" method="POST">
+                    <div class="form-group">
+                        <label for="type_of_bonding">Identificación: </label>
+                            <input
+                                type="text"
+                                name="id"
+                                class="form-control"
+                                value="<?php echo $id?>"
+                                placeholder="Tipo de vinculación"
+                                style = "resize:none;"
+                                required>
+                    </div>
                     <div class="form-group">
                     <label for="name">Nombre: </label>
                     <input
-                        textarea
                             type="text"
                             name="name"
                             class="form-control"
@@ -82,6 +66,7 @@
                             style = "resize:none;"
                             required>
                     </div>
+                    
                     <div class="form-group">
                     <label for="lastname">Apellidos: </label>
                         <input
@@ -104,7 +89,7 @@
                             style = "resize:none;"
                             required>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                     <label for="contract_expiration">Fecha de vencimiento: </label>
                         <input
                             type="text"
@@ -116,7 +101,7 @@
                             onfocusout="(this.type='text')"
                             style = "resize:none;"
                             required>
-                    </div>
+                    </div> -->
                     <div class="form-group">
                     <label for="phone">Telefono: </label>
                         <input
@@ -126,7 +111,7 @@
                             value="<?php echo $phone?>"
                             placeholder="Número telefonico"
                             style = "resize:none;"
-                            required>
+                            >
                     </div>
                     <div class="form-group">
                     <label for="email">Correo: </label>
@@ -139,17 +124,17 @@
                             style = "resize:none;"
                             required>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                     <label for="contract_supervisor">Supervisor de contrato: </label>
                         <input
                             type="text"
                             name="contract_supervisor"
                             class="form-control"
-                            value="<?php echo $contract_supervisor?>"
+                            value="<?php //echo $contract_supervisor?>"
                             placeholder="Supervisor de contrato"
                             style = "resize:none;"
                             required>
-                    </div>
+                    </div> -->
                     <div class="form-group">
                     <label for="project">Proyecto: </label>
                         <input
@@ -161,7 +146,7 @@
                             style = "resize:none;"
                             required>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                     <label for="program">Programa: </label>
                         <input
                             type="text"
@@ -171,8 +156,8 @@
                             placeholder="Programa o convenio"
                             style = "resize:none;"
                             required>
-                    </div>
-                    <div class="form-group">
+                    </div> -->
+                    <!-- <div class="form-group">
                     <label for="dependency">Dependencia: </label>
                         <input
                             type="text"
@@ -182,8 +167,8 @@
                             placeholder="Dependencia"
                             style = "resize:none;"
                             required>
-                    </div>
-                    <div class="form-group">
+                    </div> -->
+                    <!-- <div class="form-group">
                         <label for="job_title">Cargo: </label>
                         <input
                             type="text"
@@ -193,8 +178,8 @@
                             placeholder="Cargo"
                             style = "resize:none;"
                             required>
-                    </div>
-                    <div class="form-group">
+                    </div> -->
+                    <!-- <div class="form-group">
                     <label for="type_of_bonding">Tipo de vinculacion: </label>
                         <input
                             type="text"
@@ -204,14 +189,14 @@
                             placeholder="Tipo de vinculación"
                             style = "resize:none;"
                             required>
-                    </div>
+                    </div> -->
 
 
 
                     <input type="submit" class="btn btn-light  btn-block" name="update" value="Guardar"></input>
                     <!-- se agregan como links las opciones de editar y eliminar desde  -->
                     <!-- <a href="edit_registry.php?id=<?php echo $id?>" class="btn btn-light btn-block" title="Editar">Editar</a>                    -->
-                    <a href="delete_registry.php?id=<?php echo $id?>" class="btn btn-light btn-block" title="Eliminar">Eliminar</a>
+                    <a href="delete_contractor.php?id=<?php echo $id?>" class="btn btn-light btn-block" title="Eliminar">Eliminar</a>
                 </form>
             </div>
         </div>
@@ -227,7 +212,7 @@
     </form>
 </div>
 
-    <form action ="activo_carnet.php"  method="POST" class= "text-center ">
+    <form action ="listar_contractor.php"  method="POST" class= "text-center ">
     <input type = "submit" name= "ppal" value = "Volver al listado"  style="color:black"></input>
     </form><br><br><br><br><br><br><br>
 

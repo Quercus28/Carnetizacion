@@ -1,10 +1,10 @@
 
 
-function mostrarUsuario(nombre){
+function mostrarUsuario1(nombre){
      
      var xmlhttp = new XMLHttpRequest();
      
-     xmlhttp.open("GET","buscar.php?nombre=" + nombre, true);
+     xmlhttp.open("GET","buscar_contractor.php?nombre=" + nombre, true);
 
      if(nombre.length === ""){
           resultado.innerHTML = "";
@@ -16,7 +16,7 @@ function mostrarUsuario(nombre){
                     // document.getElementById('info').innerHTML = xmlhttp.responseText;
 
                     var i = xmlhttp.responseText;
-                    var m = i.slice(699,);
+                    var m = i.slice(711,);
                     document.getElementById('info').innerHTML = m;
 
                }
