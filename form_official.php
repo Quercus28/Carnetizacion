@@ -7,10 +7,9 @@
     <a> Formulario </a>
 </header>
 
-<div class="container p-4">
-    <div class="roow">
+<div class="main">
+    <section class="signup">
         <div class="col-mod-4">
-
             <?php if(isset($_SESSION['message'])) { ?>
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                     <?= $_SESSION['message']  ?>
@@ -19,116 +18,197 @@
                     </button>
                 </div>
             <?php } ?>
+        </div>
+        <div class="container">
+            <fieldset>
+            <legend>
+                Formulario de Contratista
+            </legend> 
+            <div class="signup-content">
+                <form action="save_official.php" method="POST" class="signup-form">
+                        
+                        <div class="form-group" >
+                            <label for="in_identification">Número de Identificación</label>
+                            <input
+                                type="number"
+                                name="in_identification"
+                                class="form-input"
+                                style = "resize:none;"
+                                required>
+                        </div>
 
-            <div class="card card-body">
-                <form action="save_official.php" method="POST">
-                    <div class="form-group">
-                        <input
-                            type="number"
-                            name="in_identification"
-                            class="form-control"
-                            placeholder="Número de Identificación"
-                            style = "resize:none;"
-                            required>
+
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                name="in_name"
+                                class="form-control"
+                                placeholder="Nombres"
+                                style = "resize:none;"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                name="in_lastname"
+                                class="form-control"
+                                placeholder="Apellidos"
+                                style = "resize:none;"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="email"
+                                name="in_email"
+                                class="form-control"
+                                placeholder="Correo electrónico"
+                                style = "resize:none;"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="number"
+                                name="in_phone"
+                                class="form-control"
+                                placeholder="Número de teléfono celular"
+                                style = "resize:none;"
+                                required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                        <!-- <label for="tipo">Cargo*</label>-->
+                            <div class="select-list1">
+                                <select name="in_job_title" id="tipo" required>
+                                            <option value="NG">Seleccione el Cargo:</option>
+                                            <option value="agente">Agente de Tránsito</option>
+                                            <option value="asesor">Asesor</option>
+                                            <option value="protocolo">Asesor de Protocolo</option>
+                                            <option value="administrativo">Auxiliar Administrativo</option>
+                                            <option value="generales">Auxiliar de Servicios Generales</option>
+                                            <option value="trituradora">Ayudante Trituradora</option>
+                                            <option value="bombero">Bombero</option>
+                                            <option value="celador">Celador</option>
+                                            <option value="comandante">Comandante de Tránsito</option>
+                                            <option value="comisario">Comisario de Familia</option>
+                                            <option value="comunicador">Comunicador</option>
+                                            <option value="concejal">Concejal</option>
+                                            <option value="conductor">Conductor T.P.</option>
+                                            <option value="contratista">Contratista-Asesor</option>
+                                            <option value="coordinador">Coordinador</option>
+                                            <option value="corregidora">Corregidora</option>
+                                            <option value="curador">Curador</option>
+                                            <option value="ejecutivo">Director Ejecutivo</option>
+                                            <option value="general">Director General</option>
+                                            <option value="tecnico">Director Técnico</option>
+                                            <option value="gerente">Gerente</option>
+                                            <option value="centro">Gerente del Centro</option>
+                                            <option value="mision">Empleado en Misión</option>
+                                            <option value="policia">Inspector de Policía Urbano</option>
+                                            <option value="policia1acat">Inspector de Policía Urbano 1A CAT</option>
+                                            <option value="programa">Líder de Programa</option>
+                                            <option value="proyecto">Líder de Proyecto</option>
+                                            <option value="maestro">Maestro T.C.</option>
+                                            <option value="minero">Minero</option>
+                                            <option value="obrero">Obrero</option>
+                                            <option value="construccion">Obrero de Construcción</option>
+                                            <option value="vias">Obrero de Vías</option>
+                                            <option value="operario">Operario</option>
+                                            <option value="practicante">Practicante</option>
+                                            <option value="excelencia">Practicante De Excelencia</option>
+                                            <option value="especializado">Profesional Especializado</option>
+                                            <option value="universitario">Profesional Universitario</option>
+                                            <option value="secretaria">Secretaría</option>
+                                            <option value="secretariadespacho">Secretaría de Despacho</option>
+                                            <option value="secretario">Secretario</option>
+                                            <option value="secretariodespacho">Secretario de Despacho</option>
+                                            <option value="subsecretaria">Subsecretaría de Despacho</option>
+                                            <option value="subsecretario">Subsecretario de Despacho</option>
+                                            <option value="supervisor">Supervisor de Tránsito</option>
+                                            <option value="tecnicoadministrativo">Técnico Administrativo</option>
+                                            <option value="salud">Técnico Área de Salud</option>
+                                            <option value="operativo">Técnico Operativo</option>
+                                        </select>
+                                </div>
+                            </div>
+                    
+                        <div class="form-group">
+                            <div class="select-list1">
+                                <select name="in_secretary" id="tipo" required>
+                                            <option value="NG">Seleccione la secretaría:</option>
+                                            <option value="app">Agencia APP</option>
+                                            <option value="concejo">Concejo de Medellin</option>
+                                            <option value="dagrd">DAGRD</option>
+                                            <option value="planeacion">Departamento Administrativo de Planeación</option>
+                                            <option value="despacho">Despacho Alcalde</option>
+                                            <option value="valorizacion">Fondo de Valorización del Municipio de Medellín</option>
+                                            <option value="sapiencia">SAPIENCIA</option>
+                                            <option value="comunicaciones">Secretaría de Comunicaciones</option>
+                                            <option value="cultura">Secretaría de Cultura Ciudadana</option>
+                                            <option value="desarrollo">Secretaria de Desarrollo Económico</option>
+                                            <option value="educacion">Secretaría de Educación</option>
+                                            <option value="evaluacion">Secretaría de Evaluacion y Control</option>
+                                            <option value="humana">Secretaría de Gestión Humana y Servicio a la Ciudadanía</option>
+                                            <option value="control">Secretaría de Gestión y Control Territorial</option>
+                                            <option value="hacienda">Secretaría de Hacienda</option>
+                                            <option value="inclusion">Secretaría de Inclusión Social, Familia y Derechos Humanos</option>
+                                            <option value="infraestructura">Secretaría de Infraestructura Física</option>
+                                            <option value="juventud">Secretaría de la Juventud</option>
+                                            <option value="mujeres">Secretaría de las Mujeres</option>
+                                            <option value="ambiente">Secretaría de Medio Ambiente</option>
+                                            <option value="movilidad">Secretaría de Movilidad</option>
+                                            <option value="participacion">Secretaría de Participación Ciudadana</option>
+                                            <option value="salud">Secretaría de Salud</option>
+                                            <option value="seguridad">Secretaría de Seguridad y Convivencia</option>
+                                            <option value="suministros">Secretaría de Suministros y Servicios</option>
+                                            <option value="general">Secretaría General</option>
+                                            <option value="privada">Secretaría Privada</option>
+                                        </select>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                name="in_photo_code"
+                                class="form-control"
+                                placeholder="Código de foto"
+                                style = "resize:none;"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                name="in_carnet_type"
+                                class="form-control"
+                                placeholder="Tipo de carnet"
+                                style = "resize:none;"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="number"
+                                name="in_cost"
+                                class="form-control"
+                                placeholder="Costo"
+                                style = "resize:none;"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                name="in_pay_method"
+                                class="form-control"
+                                placeholder="Método de pago"
+                                style = "resize:none;"
+                                required>
+                        </div>
+                        <input type="submit" class="btn btn-light  btn-block" name="save" value="Guardar"></input>
+                    </form>
                     </div>
-                    <div class="form-group">
-                        <input
-                            type="text"
-                            name="in_name"
-                            class="form-control"
-                            placeholder="Nombres"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <input
-                            type="text"
-                            name="in_lastname"
-                            class="form-control"
-                            placeholder="Apellidos"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <input
-                            type="email"
-                            name="in_email"
-                            class="form-control"
-                            placeholder="Correo electrónico"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <input
-                            type="number"
-                            name="in_phone"
-                            class="form-control"
-                            placeholder="Número de teléfono celular"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <input
-                            type="text"
-                            name="in_job_title"
-                            class="form-control"
-                            placeholder="Cargo"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <input
-                            type="text"
-                            name="in_secretary"
-                            class="form-control"
-                            placeholder="Secretaría"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <input
-                            type="text"
-                            name="in_photo_code"
-                            class="form-control"
-                            placeholder="Código de foto"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <input
-                            type="text"
-                            name="in_carnet_type"
-                            class="form-control"
-                            placeholder="Tipo de carnet"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <input
-                            type="number"
-                            name="in_cost"
-                            class="form-control"
-                            placeholder="Costo"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <input
-                            type="text"
-                            name="in_pay_method"
-                            class="form-control"
-                            placeholder="Método de pago"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <input type="submit" class="btn btn-light  btn-block" name="save" value="Guardar"></input>
-                </form>
+                </div>
             </div>
         </div>
-        <div class="col-mod-4">
-
-        </div>
-    </div>
+    </section>
 </div>
     <div class="container p-4">
         <div class="roow">
