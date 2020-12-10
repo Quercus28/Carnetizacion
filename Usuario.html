@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="vendor/jquery-ui/jquery-ui.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+           
+            <div class="container">
+                <fieldset >
+                <legend> Usuario</legend>
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombres">Nombres</label>
+                                <input type="text" class="form-input" name="nombres" id="nombres" />
+                            </div>
+                            <div class="form-group">
+                                <label for="apellidos">Apellidos</label>
+                                <input type="text" class="form-input" name="apellidos" id="apellidos" />
+                            </div>
+                        </div>
+                         <div class="form-row">
+                            <div class="form-group">
+                                <label for="cedula">Cédula</label>
+                                <input type="text" class="form-input" name="cedula" id="cedula" />
+                            </div>
+                            <div class="form-group">
+                                <label for="correo">Correo Electrónico</label>
+                                <input type="email" class="form-input" name="correo" id="correo" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dependencia">Dependencia</label>
+                                <input type="text" class="form-input" name="dependencia" id="dependencia" />
+                            </div>
+                            <div class="form-group">
+                                <label for="secretaria">Secretaría</label>
+                                <input type="text" class="form-input" name="secretaria" id="secretaria" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="numero">Número</label>
+                                <input type="number" class="form-input" name="numero" id="numero" />
+                            </div>
+                            <div class="form-group">
+                                <label for="estatus">Estatus</label>
+                                <input type="text" class="form-input" name="estatus" id="estatus" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="valor">Valor</label>
+                                <input type="number" class="form-input" name="valor" id="valor" />
+                            </div>
+                            <div class="form-group">
+                                <label for="autorizacion">Autorización</label>
+                                <input type="text" class="form-input" name="autorizacion" id="autorizacion" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group form-icon">
+                                <label for="fecha_foto">Fecha de la Foto</label>
+                                <input type="date" class="form-input" name="fecha_foto" id="fecha_foto" placeholder="MM-DD-YYYY" />
+                            </div>
+                            <div class="form-group form-icon">
+                                <label for="fecha_ela">Fecha de Elaboración</label>
+                                <input type="date" class="form-input" name="fecha_ela" id="fecha_ela" placeholder="MM-DD-YYYY" />
+                            </div>
+
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group form-icon">
+                                <label for="fecha_entrega">Fecha de Entrega</label>
+                                <input type="date" class="form-input" name="fecha_entrega" id="fecha_entrega" placeholder="MM-DD-YYYY" />
+                            </div>
+                            <div class="form-group">
+                                <label for="estado">Estado de Pago</label>
+                                <input type="text" class="form-input" name="estado" id="estado" />
+                            </div>
+
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="toma">Toma</label>
+                                <input type="text" class="form-input" name="toma" id="toma" />
+
+
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="MAX_FILE_SIZE">Cargar la foto</label>  <!--desde aqui hasta type="file" es el boton para cargar la foto-->
+                                <input type="hidden" name="MAX_FILE_SIZE" value="4194304" id="MAX_FILE_SIZE" />
+                                <input type="file" />
+
+                               <label for="obs">Observaciones</label>
+                               <textarea name="obs" rows="10" cols="50" placeholder="Observaciones"></textarea>
+                            </div>
+
+                        </div>
+
+
+
+                     <div class="form-row">
+                       <div class="form-group">
+                            <input type="submit" name="submit" id="enviaCorreo" class="form-submit" value="Enviar Correo al Usuario"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="editar" class="form-submit" value="Editar"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="enviar" class="form-submit" value="Enviar"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="atras" class="form-submit" value="Atrás"/>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                </fieldset>
+            </div>
+        
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="vendor/jquery-ui/jquery-ui.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+             <fieldset> 
+                <legend>Formulario de Contratista</legend>
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form">
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico*</label>
+                            <input type="email" class="form-input" name="email" id="email"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="caja">¿Desea tomarse la foto?</label>
+                            <div class="select-list1">
+                                <select name="caja" id="caja" required>
+                                    <option value="NG">Seleccione una opción</option>
+                                    <option value="SI">Si</option>
+                                    <option value="NO">No</option>
+                                </select>
+                            </div>
+                            <label for="">- En caso de que desee y autorice usar la foto del año actual, elija la opción "NO"*</label>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="tipo">Tipo de carnet que desea*</label>
+                                <div class="select-list1">
+                                    <select name="tipo" id="tipo" required>
+                                        <option value="NG">Seleccione una opción de carnet que desea:</option>
+                                        <option value="carnet">Solo carnet</option>
+                                        <option value="completo">Carnet, porta - carnet y cinta</option>
+                                        <option value="copia">Copia de solo carnet</option>
+                                        <option value="copiacompleto">Copia de carnet, porta - carnet y cinta</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Costo">Costo</label>
+                                <input type="text" disabled=disabled class="form-input" name="Costo" id="caja"/>
+
+
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Cedula">Número de cédula.*</label>
+                                <input type="text" class="form-input" name="Cedula" id="caja" />
+                                <label for="Cedula">Sin espacios; comas ni puntos*</label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Telefono">Número de telefónico de contacto.*</label>
+                                <input type="text" class="form-input" name="Telefono" id="caja" />
+                                <label for="Telefono">- Celular*</label>
+                            </div>
+
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Nombres">Nombres*</label>
+                                <input type="text" class="form-input" name="Nombres" id="caja" />
+                                <label for="">- Nombre y Apellidos completos, usando mayusculas iniciales. como desea que aparezca en el carné.*</label>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Apellidos">Apellidos*</label>
+                                <input type="text" class="form-input" name="Apellidos" id="caja" />
+                            </div>
+
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="tipo">Secretaría*</label>
+                                <div class="select-list1">
+                                    <select name="tipo" id="tipo" required>
+                                        <option value="NG">Seleccione la secretaría:</option>
+                                        <option value="app">Agencia APP</option>
+                                        <option value="concejo">Concejo de Medellin</option>
+                                        <option value="dagrd">DAGRD</option>
+                                        <option value="planeacion">Departamento Administrativo de Planeación</option>
+                                        <option value="despacho">Despacho Alcalde</option>
+                                        <option value="valorizacion">Fondo de Valorización del Municipio de Medellín</option>
+                                        <option value="sapiencia">SAPIENCIA</option>
+                                        <option value="comunicaciones">Secretaría de Comunicaciones</option>
+                                        <option value="cultura">Secretaría de Cultura Ciudadana</option>
+                                        <option value="desarrollo">Secretaria de Desarrollo Económico</option>
+                                        <option value="educacion">Secretaría de Educación</option>
+                                        <option value="evaluacion">Secretaría de Evaluacion y Control</option>
+                                        <option value="humana">Secretaría de Gestión Humana y Servicio a la Ciudadanía</option>
+                                        <option value="control">Secretaría de Gestión y Control Territorial</option>
+                                        <option value="hacienda">Secretaría de Hacienda</option>
+                                        <option value="inclusion">Secretaría de Inclusión Social, Familia y Derechos Humanos</option>
+                                        <option value="infraestructura">Secretaría de Infraestructura Física</option>
+                                        <option value="juventud">Secretaría de la Juventud</option>
+                                        <option value="mujeres">Secretaría de las Mujeres</option>
+                                        <option value="ambiente">Secretaría de Medio Ambiente</option>
+                                        <option value="movilidad">Secretaría de Movilidad</option>
+                                        <option value="participacion">Secretaría de Participación Ciudadana</option>
+                                        <option value="salud">Secretaría de Salud</option>
+                                        <option value="seguridad">Secretaría de Seguridad y Convivencia</option>
+                                        <option value="suministros">Secretaría de Suministros y Servicios</option>
+                                        <option value="general">Secretaría General</option>
+                                        <option value="privada">Secretaría Privada</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-row">
+                           
+                           <div class="form-group">
+                                <label for="Supervisor">Supervisor del contrato.*</label>
+                                <input type="text" class="form-input" name="Supervisor" id="caja" />
+                                <label for="">- Esta información sera verificada.*</label>
+
+                            </div>
+                           
+                           
+                            <div class="form-group form-icon">
+                                <label for="Fecha_vencimiento">Fecha de vencimiento del contrato.*</label>
+                                <input type="text" class="form-input" name="Fecha_vencimiento" id="birth_date" placeholder="MM-DD-YYYY" />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                           
+                           <div class="form-group">
+                                <label for="Programa">Proyecto, programa o convenio.*</label>
+                                <input type="text" class="form-input" name="Programa" id="caja" />
+                            
+
+                            </div>
+                        </div>
+                       <!-- <div class="form-radio">
+                                <label for="gender">Gender</label>
+                                <div class="form-flex">
+                                    <input type="radio" name="gender" value="male" id="male" checked="checked" />
+                                    <label for="male">Male</label>
+
+                                    <input type="radio" name="gender" value="female" id="female" />
+                                    <label for="female">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone_number">Phone number</label>
+                            <input type="number" class="form-input" name="phone_number" id="phone_number" />
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-input" name="password" id="password" />
+                            </div>
+                            <div class="form-group">
+                                <label for="re_password">Repeat your password</label>
+                                <input type="password" class="form-input" name="re_password" id="re_password" />
+                            </div>
+                        </div>-->
+                     <!--<div class="form-text">
+                            <a href="#" class="add-info-link"><i class="zmdi zmdi-chevron-right"></i>Additional info</a>
+                            <div class="add_info">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-input" name="email" id="email" />
+                                </div>
+                                <div class="form-group" id="caja1">
+                                    <label for="country">Country</label>
+                                    <div class="select-list">
+                                        <select name="country" id="Country" required>
+                                            <option value="US">United State</option>
+                                            <option value="UK">English</option>
+                                            <option value="VN">Viet Nam</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="form-group">
+                       <!-- <input type="submit" name="submit" id="submit" class="form-submit" value="Submit" />-->
+                            <input type="submit" name="submit" id="enviar" class="form-submit" value="Enviar"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+<!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>

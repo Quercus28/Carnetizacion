@@ -60,7 +60,7 @@
 $query = "SELECT * FROM reportes";
 
 $result = mysqli_query($conn, $query);
-    while($datos=$result->fetch_assoc())
+  /*  while($datos=$result->fetch_assoc())
     {
         ?>
             <tr> 
@@ -89,7 +89,7 @@ $result = mysqli_query($conn, $query);
                 </td>
             </tr>
             <?php   
-    } 
+    } */
 ?>
 </table>
 

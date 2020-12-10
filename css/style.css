@@ -62,7 +62,9 @@ list-type-ulli, ul {
   font-style: italic;
   font-weight: 900;
   src: url("../fonts/montserrat/montserrat-v12-latin-900.ttf"), url("../fonts/montserrat/montserrat-v12-latin-900.eot") format("embedded-opentype"), url("../fonts/montserrat/montserrat-v12-latin-900.svg") format("woff2"), url("../fonts/montserrat/montserrat-v12-latin-900.woff") format("woff"), url("../fonts/montserrat/montserrat-v12-latin-900.woff2") format("truetype"); }
-a:focus, a:active {
+
+a:focus,
+a:active {
   text-decoration: none;
   outline: none;
   transition: all 300ms ease 0s;
@@ -71,7 +73,9 @@ a:focus, a:active {
   -o-transition: all 300ms ease 0s;
   -ms-transition: all 300ms ease 0s; }
 
-input, select, textarea {
+input,
+select,
+textarea {
   outline: none;
   appearance: unset !important;
   -moz-appearance: unset !important;
@@ -79,7 +83,8 @@ input, select, textarea {
   -o-appearance: unset !important;
   -ms-appearance: unset !important; }
 
-input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
   appearance: none !important;
   -moz-appearance: none !important;
   -webkit-appearance: none !important;
@@ -234,18 +239,22 @@ input ,textarea{
 
   input:focus {
     border: 1px solid #1da0f2; }
+
   input::-webkit-input-placeholder {
     color: #999;
     text-transform: uppercase;
     font-weight: 600; }
+
   input::-moz-placeholder {
     color: #999;
     text-transform: uppercase;
     font-weight: 600; }
+
   input:-ms-input-placeholder {
     color: #999;
     text-transform: uppercase;
     font-weight: 600; }
+
   input:-moz-placeholder {
     color: #999;
     text-transform: uppercase;
@@ -253,11 +262,14 @@ input ,textarea{
 
 .form-radio {
   margin-bottom: 40px; }
+
   .form-radio input {
     width: 0;
     height: 0;
     position: absolute;
     left: -9999px; }
+
+
   .form-radio input + label + textarea {
     margin: 0px;
     padding: 12px 10px;
@@ -284,13 +296,16 @@ input ,textarea{
     -webkit-border-radius: 5px;
     -o-border-radius: 5px;
     -ms-border-radius: 5px; }
+
   .form-radio input:checked + label {
     background-color: #1da0f2;
     color: #FFF;
     border-color: #1da0f2;
     z-index: 1; }
+
   .form-radio input:focus + label {
     outline: none; }
+
   .form-radio input:hover {
     background-color: #1da0f2;
     color: #FFF;
@@ -303,6 +318,7 @@ input ,textarea{
   -o-border-radius: 5px 0 0 5px;
   -ms-border-radius: 5px 0 0 5px;
   border-right: none; }
+
 .form-flex input + label:last-of-type {
   border-radius: 0 5px 5px 0;
   -moz-border-radius: 0 5px 5px 0;
@@ -317,7 +333,8 @@ input ,textarea{
     width: 50%;
     padding: 0 11px; }
 
-.form-group, .form-radio {
+.form-group,
+.form-radio {
   margin-bottom: 23px;
   position: relative; }
 
@@ -347,6 +364,7 @@ input ,textarea{
   -webkit-align-items: center;
   -o-align-items: center;
   -ms-align-items: center; }
+
   .add-info-link .zmdi {
     font-size: 18px;
     padding-right: 14px; }
@@ -372,7 +390,8 @@ ul li:not(.init) {
   color: #222;
   padding: 5px 10px; }
 
-ul li:not(.init):hover, ul li.selected:not(.init) {
+ul li:not(.init):hover,
+ul li.selected:not(.init) {
   background: #1da0f2;
   color: #fff; }
 
@@ -386,6 +405,7 @@ li.init {
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
   -ms-border-radius: 5px; }
+
   li.init:after {
     position: absolute;
     right: 20px;
@@ -412,16 +432,19 @@ li.init {
   border: none;
   margin-top: 37px;
   cursor: pointer; }
-  .form-submit:hover {
+
+.form-submit:hover
+{
     background: #0c85d0;
 
-display: inline-block;}
+    display: inline-block;}
 
 label.error {
   display: block;
   position: absolute;
   top: 0px;
   right: 0; }
+
   label.error:after {
     font-family: 'Material-Design-Iconic-Font';
     position: absolute;
@@ -440,9 +463,39 @@ input.error {
   width: 100%;
   margin-bottom: 47px; }
 
+.select-list1 { /*modificacion creada por mateo para cuadro de la lista*/
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    background-color: white;
+    position: relative;
+    display: inline-block;
+    width: 50%;
+}
+
 .list-item {
   position: absolute;
   width: 100%; }
+
+#caja { /*modificacion creada por mateo para usarlo como id de caja en varias de ingreso*/
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    background: white;
+    font-size: 17px;
+    padding: 15px 20px;
+    width: 100%;
+    z-index: 9;
+}
+
+#tipo { /*modificacion creada por mateo para cuadro de la lista*/
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    background: white;
+    font-size: 17px;
+    padding: 15px 20px;
+    width: 210%;
+    z-index: 9;
+}
+
 
 #country {
   z-index: 99; }
