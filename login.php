@@ -2,8 +2,8 @@
     include("includes/header.php");
 ?>
 
-<header class="page-header font-small text-center pt-4 pb-3" style="background-color:#c79be0; color:white" >
-    <a> Ingreso como administrador </a>
+<header class="page-header font-small text-center pt-4 pb-3" style="background-color:#0E8EC9; color:white align-items:center" >
+    <a> Ingreso Como Administrador </a>
 </header>
 
 <?php
@@ -33,8 +33,8 @@
 
     <div class="container p- 4">
         <div class="row">
-            <div class="center" align="center">
-                <div class="card card-body">
+            <div class="center" style="align:center">
+                <div class="card card-body" >
                     <form action="login.php" method="POST">
                         <legend>Ingresar:</legend>
                         <br>

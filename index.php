@@ -1,6 +1,6 @@
 <?php include("includes/header.php"); ?>
 
-<header class="page-header font-small text-center pt-4 pb-3" style="background-color:#c79be0; color:white">
+<header class="page-header font-small text-center pt-4 pb-3" style="background-color:#0E8EC9; color:white">
     <a> Página principal </a>
 </header>
 
@@ -14,7 +14,7 @@
             <form action="form_official.php" method="POST">
                 <a href="form_official.php"><img src="imagenes2/servidorpublico.jpg" style="width: 242px;"
                         alt="sing up image">
-                    <input type="submit" name="nologin" value="Formulario Servidor Público"
+                    <input type="submit" name="login" value="Formulario Servidor Público"
                         style="background-color:#DCDCDC; border-color:black; color:black; padding: 5px; width: 242px"
                         class="btn btn-lg"></input>
             </form>

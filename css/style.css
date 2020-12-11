@@ -633,3 +633,23 @@ legend {
     font-size: 80px;
     text-align: center;
 }
+
+/*.card,.card-body
+{
+
+   display: block;
+   position: absolute;
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -50%); 
+
+
+
+}
+*/
+
+/*.row
+{
+height: 400px;
+
+}*/

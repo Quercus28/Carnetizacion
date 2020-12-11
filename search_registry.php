@@ -8,8 +8,8 @@
     include("includes/header.php")
 ?>
 
-    <header class="page-header font-small text-center pt-4 pb-3" style="background-color:#c79be0; color:white" >
-        <a> Nombre página </a>
+    <header class="page-header font-small text-center pt-4 pb-3" style="background-color:#0E8EC9; color:white" >
+        <a> BUSCAR REGISTRO </a>
     </header><br><br>
     
 <form action ="search_registry.php"  method="POST">>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
