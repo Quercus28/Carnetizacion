@@ -22,7 +22,7 @@
         <div class="container">
             <fieldset>
                 <legend>
-                    Formulario de Servidor Publico
+                    Formulario de Contratista
                 </legend>
                 <div class="signup-content">
                     <form action="save_official.php" method="POST" id="signup-form" class="signup-form">
@@ -100,64 +100,7 @@
 
                         <!--hay que revisar este selec box-->
                         <div class="form-row">
-                            <div class="form-group">
-                                <label for="in_job_title">Cargo*</label>
-                                <div class="select-list1">
-                                    <select name="in_job_title" id="tipo" required>
-                                        <option value="NG">Seleccione el Cargo:</option>
-                                        <option value="agente">Agente de Tránsito</option>
-                                        <option value="asesor">Asesor</option>
-                                        <option value="protocolo">Asesor de Protocolo</option>
-                                        <option value="administrativo">Auxiliar Administrativo</option>
-                                        <option value="generales">Auxiliar de Servicios Generales</option>
-                                        <option value="trituradora">Ayudante Trituradora</option>
-                                        <option value="bombero">Bombero</option>
-                                        <option value="celador">Celador</option>
-                                        <option value="comandante">Comandante de Tránsito</option>
-                                        <option value="comisario">Comisario de Familia</option>
-                                        <option value="comunicador">Comunicador</option>
-                                        <option value="concejal">Concejal</option>
-                                        <option value="conductor">Conductor T.P.</option>
-                                        <option value="contratista">Contratista-Asesor</option>
-                                        <option value="coordinador">Coordinador</option>
-                                        <option value="corregidora">Corregidora</option>
-                                        <option value="curador">Curador</option>
-                                        <option value="ejecutivo">Director Ejecutivo</option>
-                                        <option value="general">Director General</option>
-                                        <option value="tecnico">Director Técnico</option>
-                                        <option value="gerente">Gerente</option>
-                                        <option value="centro">Gerente del Centro</option>
-                                        <option value="mision">Empleado en Misión</option>
-                                        <option value="policia">Inspector de Policía Urbano</option>
-                                        <option value="policia1acat">Inspector de Policía Urbano 1A CAT</option>
-                                        <option value="programa">Líder de Programa</option>
-                                        <option value="proyecto">Líder de Proyecto</option>
-                                        <option value="maestro">Maestro T.C.</option>
-                                        <option value="minero">Minero</option>
-                                        <option value="obrero">Obrero</option>
-                                        <option value="construccion">Obrero de Construcción</option>
-                                        <option value="vias">Obrero de Vías</option>
-                                        <option value="operario">Operario</option>
-                                        <option value="practicante">Practicante</option>
-                                        <option value="excelencia">Practicante De Excelencia</option>
-                                        <option value="especializado">Profesional Especializado</option>
-                                        <option value="universitario">Profesional Universitario</option>
-                                        <option value="secretaria">Secretaría</option>
-                                        <option value="secretariadespacho">Secretaría de Despacho</option>
-                                        <option value="secretario">Secretario</option>
-                                        <option value="secretariodespacho">Secretario de Despacho</option>
-                                        <option value="subsecretaria">Subsecretaría de Despacho</option>
-                                        <option value="subsecretario">Subsecretario de Despacho</option>
-                                        <option value="supervisor">Supervisor de Tránsito</option>
-                                        <option value="tecnicoadministrativo">Técnico Administrativo</option>
-                                        <option value="salud">Técnico Área de Salud</option>
-                                        <option value="operativo">Técnico Operativo</option>
-                                    </select>
-                                </div>
-                            </div>
 
-
-                            <!--hay que revisar este selec box-->
                             <div class="form-group">
                                 <label for="in_secretary">Secretaría*</label>
                                 <div class="select-list1">
@@ -196,32 +139,65 @@
                                     </select>
                                 </div>
                             </div>
+
+
+
+                            <div class="form-group">
+                                <label for="in_supervisor">Supervisor del contrato.*</label>
+                                <input type="text" class="form-input" name="in_supervisor" id="caja"
+                                    style="resize:none;" required>
+                                <label for="">- Esta información sera verificada.*</label>
+
+                            </div>
                         </div>
+
                         <div class="form-row">
-                        <!--<div class="form-group">
+
+                            <div class="form-group form-icon">
+                                <label for="in_expiration_date">Fecha de vencimiento del contrato.*</label>
+                                <input type="date" class="form-input" name="in_expiration_date" id="birth_date"
+                                    style="resize:none;" required>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="in_program">Proyecto, programa o convenio.*</label>
+                                <input type="text" class="form-input" name="in_program" id="caja" style="resize:none;"
+                                    required>
+
+
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="form-row">
+                            <!--<div class="form-group">
                                 <input type="text" name="in_photo_code" class="form-control"
                                     placeholder="Código de foto" style="resize:none;" required>
                             </div>-->
                             <div class="form-group">
                                 <label for="in_photo_code">Código de Foto</label>
-                                <input type="text" name="in_photo_code" class="form-input" id="caja" style="resize:none;"
-                                    required>
+                                <input type="text" name="in_photo_code" class="form-input" id="caja"
+                                    style="resize:none;" required>
                             </div>
-                        <div class="form-group">
-                            <label for="in_pay_method">Seleccione el Médoto de Pago*</label>
-                            <div class="select-list1">
-                                <select name="in_pay_method" id="tipo" required>
-                                    <option value="NG">Método de pago deseado</option>
-                                    <option value="efectivo">Pago en Efectivo</option>
-                                    <option value="qr">Pago con Código QR</option>
-                                    <option value="transferencia">Pago con Transferencia Bancaria</option>
-                                    <option value="credito">Pago con Tarjeta de Crédito</option>
-                                    <option value="pse">Pago con PSE</option>
-                                    <option value="consingacion">Pago con Consignación Bancaria</option>
-                                    <option value="otros">Otros</option>
-                                </select>
+                            <div class="form-group">
+                                <label for="in_pay_method">Seleccione el Médoto de Pago*</label>
+                                <div class="select-list1">
+                                    <select name="in_pay_method" id="tipo" required>
+                                        <option value="NG">Método de pago deseado</option>
+                                        <option value="efectivo">Pago en Efectivo</option>
+                                        <option value="qr">Pago con Código QR</option>
+                                        <option value="transferencia">Pago con Transferencia Bancaria</option>
+                                        <option value="credito">Pago con Tarjeta de Crédito</option>
+                                        <option value="pse">Pago con PSE</option>
+                                        <option value="consingacion">Pago con Consignación Bancaria</option>
+                                        <option value="otros">Otros</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
                         </div>
 
                         <div class="form-group">
