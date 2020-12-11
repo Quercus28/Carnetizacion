@@ -298,26 +298,28 @@
                             >
                         </div>
                         <input type="submit" class="btn btn-primary  btn-block" name="update" value="Guardar"></input>
-                        <a href="delete_official.php?id=<?php echo $id?>" class="btn btn-light btn-block" title="Eliminar">Eliminar</a>
-                        <div class="signup-image">
-                            <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
-                        </div>
+
                     </form>
+                        <div>
+                            <form action="upload.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
+                                <input type="file" name="image"/>
+                                <button type="submit" >Subir imagen</button>
+                            </form>
+                        </div>
+
+                        <a href="delete_official.php?id=<?php echo $id?>" class="btn btn-light btn-block" title="Eliminar">Eliminar</a>
+
+                        <div class="col-mod-4">
+                        <form action ="list_official.php" method="POST" class= "register-form">
+                            <input type = "submit" class="btn btn-light btn-block" name= "ppal" value = "Volver al listado"
+                            style="color:black"></input>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 </div>
-<div>
-    <form action="upload.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
-        <input type="file" name="image"/>
-        <button type="submit" >Subir imagen</button>
-    </form>
-</div>
-
-    <form action ="list_official.php"  method="POST" class= "text-center ">
-    <input type = "submit" name= "ppal" value = "Volver al listado"  style="color:black"></input>
-    </form><br><br><br><br><br><br><br>
 
 <?php
     include("includes/footer.php");

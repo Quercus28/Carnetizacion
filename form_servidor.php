@@ -169,7 +169,7 @@
                         <h5>Costo</h5>
                         <div class="form-group">
                             <label for="costo">
-                                <i class="zmdi zmdi-accounts-alt material-icons-name">
+                                <i class="zmdi zmdi-money material-icons-name">
                                 </i>
                             </label>
                             <input
@@ -181,22 +181,22 @@
                             >
                         </div>
                         <input type="submit" class="btn btn-primary  btn-block" name="save" value="Guardar"></input>
-                        <?php
-                            if(isset($_POST['nologin'])) {?>
-                                            <form action ="index.php" method="POST" class= "text-center ">
-                                                <input type = "submit" class="btn btn-light btn-block" name= "ppal"
-                                                value = "Volver al menú principal" style="color:black"></input>
-                                            </form>
-                        <?php } else {?>
-                                            <form action ="indexlog.php" method="POST" class= "text-center ">
-                                                <input type = "submit" class="btn btn-light btn-block" name= "ppal"
-                                                value = "Volver al menú principal" style="color:black"></input>
-                                            </form>
-                        <?php }?>
-                        <div class="signup-image">
-                            <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
-                        </div>
                     </form>
+                    <?php
+                        if(isset($_POST['nologin'])) {?>
+                            <form action ="index.php" method="POST" class= "text-center ">
+                                <input type = "submit" class="btn btn-light btn-block" name= "ppal"
+                                value = "Volver al menú principal" style="color:black"></input>
+                            </form>
+                        <?php } else {?>
+                            <form action ="indexlog.php" method="POST" class= "text-center ">
+                                <input type = "submit" class="btn btn-light btn-block" name= "ppal"
+                                value = "Volver al menú principal" style="color:black"></input>
+                            </form>
+                    <?php }?>
+                    <div class="signup-image">
+                        <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
+                    </div>
                 </div>
             </div>
         </div>

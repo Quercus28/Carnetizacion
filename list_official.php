@@ -7,9 +7,8 @@
     include("includes/header.php")
 ?>
 
-    <header class="page-header font-small text-center pt-4 pb-3" style="background-color:#c79be0; color:white" >
-        <a> Nombre página </a>
-    </header><br><br>
+<br><br>
+
 
     <!-- barra de busqueda -->
     <form action="" method="POST" style= "padding-left:15%;">

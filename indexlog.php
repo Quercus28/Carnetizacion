@@ -8,7 +8,7 @@
     <div class="ppal">
         <div class="btns">
             <div class="form-group form-buttom">
-                <form action ="form_official.php"  method="POST">
+                <form action ="form_servidor.php"  method="POST">
                     <input type = "submit" name= "login" value = "formulario Funcionario" class="btn"></input>
                 </form>
             </div>
@@ -42,7 +42,7 @@
             <figure>
                 <img src="img\escudoAlcaldia.png" alt="escudo alcaldia">
             </figure>
-        </div>  
+        </div>
     </div>
 </div>
 
