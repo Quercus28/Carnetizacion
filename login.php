@@ -2,9 +2,7 @@
     include("includes/header.php");
 ?>
 
-<header class="page-header font-small text-center pt-4 pb-3" style="background-color:#c79be0; color:white" >
-    <a> Ingreso como administrador </a>
-</header>
+
 
 <?php
     if(isset($_POST['log']))
@@ -22,15 +20,9 @@
 <?php       }
     }
 ?>
-   <style>
-        .head{
-            margin: 0;
-        }
-        .center{
-            margin: 100px 450px;
-        }
-    </style>
+   
 
+<<<<<<< HEAD
     <div class="signup">
         <div class="row"  align="center">
             <div class="center" align="center">
@@ -54,4 +46,33 @@
             </div>
         </div>
     </div>
+=======
+<div class="container rezi2">
+    <div class="ppal">
+                    <div>
+                        <h2 class="ftitle">  Ingresar </h2> 
+                        <figure>
+                            <img src="img\escudoAlcaldia.png" alt="escudo alcaldia">
+                        </figure>
+                    </div>
+                    <div class="spcpassword">
+                        <form action="login.php" method="POST">
+                            <input
+                                type="password"
+                                name="password"
+                                class="form-control"
+                                placeholder="Constraseña"
+                                
+                                required>
+                            <div class="password">
+                                <input class="btnsub rezi" name="log" type="submit" value="Entrar">
+                                <input class="btnsub rezi" type="submit" name="return" value="atrás" onclick="history.go(-1);">
+                            </div>
+                        
+                        </form>
+                        
+                    </div> 
+        </div>  
+</div>              
+>>>>>>> 8c29a8f8195625fba781f35c7a4c4c45fc644a18
 <?php include("includes/footer.php") ?>
