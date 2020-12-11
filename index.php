@@ -18,7 +18,7 @@
     <div class="form-group">
         <form action="form_official.php" method="POST">
             <a href="form_official.php"><img src="imagenes2/Sin título-1.jpg" alt="sing up image">
-                <input type="submit" name="nologin" value="Formulario"
+                <input type="submit" name="nologin" value="Formulario Contratista"
                     style="background-color:#DCDCDC; border-color:black; color:black" class="btn btn-lg"></input>
         </form>
     </div>
