@@ -178,7 +178,6 @@
                             required>
                     </div>
                     <div class="form-group">
-                        <label for="job_title">Costo: </label>
                         <input
                             type="text"
                             name="cost"
@@ -190,7 +189,6 @@
                     </div>
 
                     <div class="form-group">
-                    <label for="type_of_bonding">Metodo de pago: </label>
                         <input
                             type="text"
                             name="payMethod"
@@ -202,7 +200,6 @@
                     </div>
 
                     <div class="form-group">
-                    <label for="type_of_bonding">Estado del pago: </label>
                         <input
                             type="text"
                             name="payStatus"
@@ -214,7 +211,6 @@
                     </div>
 
                     <div class="form-group">
-                    <label for="type_of_bonding">Fecha de la atención: </label>
                         <input
                             type="date"
                             name="attentionDate"
@@ -228,7 +224,6 @@
                     </div>
 
                     <div class="form-group">
-                    <label for="contract_expiration">Fecha de la foto: </label>
                         <input
                             type="text"
                             name="photoDate"
@@ -242,7 +237,6 @@
                     </div>
 
                     <div class="form-group">
-                    <label for="contract_supervisor">Fecha de elaboración: </label>
                         <input
                             type="date"
                             name="elaborationDate"
@@ -256,7 +250,6 @@
                     </div>
 
                     <div class="form-group">
-                    <label for="contract_supervisor">Fecha de entrega: </label>
                         <input
                             type="date"
                             name="deliveryDate"
@@ -270,7 +263,6 @@
                     </div>
 
                     <div class="form-group">
-                    <label for="contract_supervisor">Fecha de vencimiento: </label>
                         <input
                             type="date"
                             name="expirationDate"
@@ -284,7 +276,6 @@
                     </div>
 
                     <div class="form-group">
-                    <label for="contract_supervisor">Estado del carné: </label>
                         <input
                             type="text"
                             name="carnetStatus"
@@ -296,7 +287,6 @@
                     </div>
 
                     <div class="form-group">
-                    <label for="contract_supervisor">Observaciones: </label>
                         <input
                             type="text"
                             name="observation"
