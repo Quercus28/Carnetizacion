@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="css/style.css">
     
 
-    <header class="form-submit text-center pt-3"  style="background-color:#1875C5;font-size:30px; color:white">
+    <header class="pt-3"  style="background-color:#1875C5;font-size:30px; color:white">
+        <i class="zmdi zmdi-account "></i>
         <a>Sistema de Carnetización</a>        
     </header>
 
