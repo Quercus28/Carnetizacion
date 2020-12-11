@@ -611,7 +611,9 @@ label.valid {
   margin-top: 20px;
   padding: 5%;
 
-  background: #97C93C;
+  background: #1f8be9;
+  
+  color: white;
 
   font-size: large;
 
@@ -627,7 +629,7 @@ label.valid {
 
 }
 .btn:hover {
-  background-color: #C8DC69; 
+  color:black;
 }
 .btns{
   margin-left: 50px;
@@ -645,7 +647,7 @@ label.valid {
 }
 
 .imagen2{
-  margin-top: 20%;
+  margin-top: 25%;
   margin-left:10%;
 }
 
@@ -660,7 +662,7 @@ label.valid {
   
   text-align: center;
   
-  color: #97C93C;
+  color: #1f8be9;
 }
 
 .btnsub{
@@ -671,7 +673,8 @@ label.valid {
 
   padding: 1%;
 
-  background: #97C93C;
+  background: #1f8be9;
+  color:white;
 
   font-size: large;
 
@@ -687,7 +690,7 @@ label.valid {
 }
 
 .btnsub:hover{
-  background: #C8DC69;
+  color:black;
 }
 
 .spcpassword{
