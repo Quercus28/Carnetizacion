@@ -30,19 +30,6 @@
         var_dump($query);
 
         mysqli_query($conn, $query);
-        // var_dump($result);
-        // if(!$result)
-        // {
-        //     die("Guardado no exitoso");
-            header('Location:listar_contractor.php');
-            exit();
-        // }else{
-        //     header('Location:listar_contractor.php');
-        //     exit();
-        // }        
+        header('Location:listar_contractor.php');
     }
-
-
-
-    include("includes/footer.php");
-?>    
+?>

@@ -49,15 +49,11 @@
                 imagedestroy($src);
                 imagedestroy($tmp1);
 
-                //insert in database
-                $insert = "UPDATE reportes set photo_code = '$id' where id = $id";
-                mysqli_query($conn, $insert);
-
                 echo "<html>
                 <head>
                 </head>
                 <body>
-                    <meta http-equiv='REFRESH' content='0 ; url=activo_carnet.php'>
+                    <meta http-equiv='REFRESH' content='0 ; url = 'edit_registry_official.php?id=.<?php echo $id;?>.'>
                     <script>
                         alert('La imagen se ha cargado correctamente ');
                     </script>
@@ -84,15 +80,11 @@
                 imagedestroy($src);
                 imagedestroy($tmp1);
 
-                //insert in database
-                $insert = "UPDATE reportes set photo_code = '$id' where id = $id";
-                mysqli_query($conn, $insert);
-
                 echo "<html>
                 <head>
                 </head>
                 <body>
-                    <meta http-equiv='REFRESH' content='0 ; url=activo_carnet.php'>
+                <meta http-equiv='REFRESH' content='0 ; url=edit_registry_official.php?id=$id'>
                     <script>
                         alert('La imagen se ha cargado correctamente ');
                     </script>
@@ -107,15 +99,11 @@
 
                 move_uploaded_file($uploadedfile,$filename1);
 
-                //insert in database
-                $insert = "UPDATE reportes set photo_code = '$id' where id = $id";
-                mysqli_query($conn, $insert);
-
                 echo "<html>
                 <head>
                 </head>
                 <body>
-                    <meta http-equiv='REFRESH' content='0 ; url=activo_carnet.php'>
+                    <meta http-equiv='REFRESH' content='0 ; url = edit_registry_official.php?id=<?php echo $id;?>
                     <script>
                         alert('La imagen se ha cargado correctamente');
                     </script>
