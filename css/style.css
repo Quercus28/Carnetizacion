@@ -201,7 +201,8 @@ body {
   font-family: Poppins; }
 
 .container {
-  width: 900px;
+  width:  20 auto;
+  height:  20 auto;
   background: #fff;
   margin: 0 auto;
   box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
@@ -256,7 +257,7 @@ body {
   padding: 75px 0; }
 
 .signup-form, .signup-image, .signin-form, .signin-image {
-  width: 50%;
+  height:  20 auto;
   overflow: hidden; }
 
 .signup-image {
