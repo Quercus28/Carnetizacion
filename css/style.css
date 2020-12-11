@@ -434,6 +434,21 @@ li.init {
   margin-top: 37px;
   cursor: pointer; }
 
+  .form-submit1 {
+    width: auto;
+    background: #1da0f2;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 16px 50px;
+    float: right;
+    border: none;
+    margin-top: 37px;
+    cursor: pointer;
+    position: relative; 
+    
+}
+
 .form-submit:hover
 {
     background: #0c85d0;

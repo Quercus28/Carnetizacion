@@ -61,9 +61,9 @@
 
 ?>
 
-    <header class="page-header font-small text-center pt-4 pb-3" style="background-color:#c79be0; color:white" >
-        <a> Nombre página </a>
-    </header>
+<header class="page-header font-small text-center pt-4 pb-3" style="background-color:#c79be0; color:white">
+    <a> Nombre página </a>
+</header>
 
 
 <div class="container p-4">
@@ -71,140 +71,68 @@
         <div class="col-mod-4">
             <div class="card card-body">
                 <form action="edit_registry.php?id=<?php echo $_GET['id'];?>" method="POST">
-                    <div class="form-group">
-                    <label for="name">Nombre: </label>
-                    <input
-                        textarea
-                            type="text"
-                            name="name"
-                            class="form-control"
-                          
-                            placeholder= "Nombres"
-                            style = "resize:none;"
-                            required>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nombres: </label>
+                            <input textarea type="text" name="name" class="form-control" 
+                                style="resize:none;" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Apellidos: </label>
+                            <input type="text" name="lastname" class="form-control" 
+                                style="resize:none;" required>
+                        </div>
                     </div>
                     <div class="form-group">
-                    <label for="lastname">Apellidos: </label>
-                        <input
-                            type="text"
-                            name="lastname"
-                            class="form-control"
-                           
-                            placeholder="Apellidos"
-                            style = "resize:none;"
-                            required>
+                        <label for="secretary">Secretaría: </label>
+                        <input type="text" name="secretary" class="form-control" placeholder="Secretaría"
+                            style="resize:none;" required>
                     </div>
                     <div class="form-group">
-                    <label for="secretary">Secretaria: </label>
-                        <input
-                            type="text"
-                            name="secretary"
-                            class="form-control"
-                           
-                            placeholder="Secretaría"
-                            style = "resize:none;"
-                            required>
+                        <label for="contract_expiration">Fecha de vencimiento: </label>
+                        <input type="text" name="contract_expiration" class="form-control"
+                            placeholder="Fecha de expiración del contrato" onfocus="(this.type='date')"
+                            onfocusout="(this.type='text')" style="resize:none;" required>
                     </div>
                     <div class="form-group">
-                    <label for="contract_expiration">Fecha de vencimiento: </label>
-                        <input
-                            type="text"
-                            name="contract_expiration"
-                            class="form-control"
-                            
-                            placeholder="Fecha de expiración del contrato"
-                            onfocus="(this.type='date')"
-                            onfocusout="(this.type='text')"
-                            style = "resize:none;"
-                            required>
+                        <label for="phone">Telefono: </label>
+                        <input type="number" name="phone" class="form-control" placeholder="Número telefonico"
+                            style="resize:none;" required>
                     </div>
                     <div class="form-group">
-                    <label for="phone">Telefono: </label>
-                        <input
-                            type="number"
-                            name="phone"
-                            class="form-control"
-                           
-                            placeholder="Número telefonico"
-                            style = "resize:none;"
-                            required>
+                        <label for="email">Correo: </label>
+                        <input type="email" name="email" class="form-control" placeholder="Correo electrónico"
+                            style="resize:none;" required>
                     </div>
                     <div class="form-group">
-                    <label for="email">Correo: </label>
-                        <input
-                            type="email"
-                            name="email"
-                            class="form-control"
-                           
-                            placeholder="Correo electrónico"
-                            style = "resize:none;"
-                            required>
+                        <label for="contract_supervisor">Supervisor de contrato: </label>
+                        <input type="text" name="contract_supervisor" class="form-control"
+                            placeholder="Supervisor de contrato" style="resize:none;" required>
                     </div>
                     <div class="form-group">
-                    <label for="contract_supervisor">Supervisor de contrato: </label>
-                        <input
-                            type="text"
-                            name="contract_supervisor"
-                            class="form-control"
-                           
-                            placeholder="Supervisor de contrato"
-                            style = "resize:none;"
-                            required>
+                        <label for="project">Proyecto: </label>
+                        <input type="text" name="project" class="form-control" placeholder="Proyecto"
+                            style="resize:none;" required>
                     </div>
                     <div class="form-group">
-                    <label for="project">Proyecto: </label>
-                        <input
-                            type="text"
-                            name="project"
-                            class="form-control"
-                           
-                            placeholder="Proyecto"
-                            style = "resize:none;"
-                            required>
+                        <label for="program">Programa: </label>
+                        <input type="text" name="program" class="form-control" placeholder="Programa o convenio"
+                            style="resize:none;" required>
                     </div>
                     <div class="form-group">
-                    <label for="program">Programa: </label>
-                        <input
-                            type="text"
-                            name="program"
-                            class="form-control"
-                           
-                            placeholder="Programa o convenio"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                    <label for="dependency">Dependencia: </label>
-                        <input
-                            type="text"
-                            name="dependency"
-                            class="form-control"
-                           
-                            placeholder="Dependencia"
-                            style = "resize:none;"
-                            required>
+                        <label for="dependency">Dependencia: </label>
+                        <input type="text" name="dependency" class="form-control" placeholder="Dependencia"
+                            style="resize:none;" required>
                     </div>
                     <div class="form-group">
                         <label for="job_title">Cargo: </label>
-                        <input
-                            type="text"
-                            name="job_title"
-                            class="form-control"
-                            
-                            placeholder="Cargo"
-                            style = "resize:none;"
-                            required>
+                        <input type="text" name="job_title" class="form-control" placeholder="Cargo"
+                            style="resize:none;" required>
                     </div>
                     <div class="form-group">
-                    <label for="type_of_bonding">Tipo de vinculacion: </label>
-                        <input
-                            type="text"
-                            name="type_of_bonding"
-                            class="form-control"
-                           
-                            placeholder="Tipo de vinculación"
-                            style = "resize:none;"
-                            required>
+                        <label for="type_of_bonding">Tipo de vinculacion: </label>
+                        <input type="text" name="type_of_bonding" class="form-control" placeholder="Tipo de vinculación"
+                            style="resize:none;" required>
                     </div>
 
 
@@ -212,7 +140,8 @@
                     <input type="submit" class="btn btn-light  btn-block" name="update" value="Guardar"></input>
                     <!-- se agregan como links las opciones de editar y eliminar desde  -->
                     <!-- <a href="edit_registry.php?id=<?php echo $id?>" class="btn btn-light btn-block" title="Editar">Editar</a>                    -->
-                    <a href="delete_registry.php?id=<?php echo $id?>" class="btn btn-light btn-block" title="Eliminar">Eliminar</a>
+                    <a href="delete_registry.php?id=<?php echo $id?>" class="btn btn-light btn-block"
+                        title="Eliminar">Eliminar</a>
                 </form>
             </div>
         </div>
@@ -223,14 +152,14 @@
 
 <div>
     <form action="upload.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
-        <input type="file" name="image"/>
-        <button type="submit" >Subir imagen</button>
+        <input type="file" name="image" />
+        <button type="submit">Subir imagen</button>
     </form>
 </div>
 
-    <form action ="activo_carnet.php"  method="POST" class= "text-center ">
-    <input type = "submit" name= "ppal" value = "Volver al listado"  style="color:black"></input>
-    </form><br><br><br><br><br><br><br>
+<form action="activo_carnet.php" method="POST" class="text-center ">
+    <input type="submit" name="ppal" value="Volver al listado" style="color:black"></input>
+</form><br><br><br><br><br><br><br>
 
 
 
