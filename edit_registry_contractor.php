@@ -60,7 +60,6 @@
             <div class="card card-body">
                 <form action="update_contractor.php?id=<?php echo $_GET['id'];?>" method="POST">
                     <div class="form-group">
-                        <label for="type_of_bonding">Identificación: </label>
                             <input
                                 type="text"
                                 name="id"
@@ -71,7 +70,6 @@
                                 required>
                     </div>
                     <div class="form-group">
-                    <label for="name">Nombre: </label>
                     <input
                             type="text"
                             name="name"
@@ -83,7 +81,6 @@
                     </div>
                     
                     <div class="form-group">
-                    <label for="lastname">Apellidos: </label>
                         <input
                             type="text"
                             name="lastname"
@@ -95,7 +92,6 @@
                     </div>
 
                     <div class="form-group">
-                    <label for="lastname">Email: </label>
                         <input
                             type="email"
                             name="email"
@@ -107,7 +103,6 @@
                     </div>
 
                     <div class="form-group">
-                    <label for="phone">Telefono: </label>
                         <input
                             type="number"
                             name="phone"
@@ -119,7 +114,6 @@
                     </div>
 
                     <div class="form-group">
-                    <label for="email">Cargo: </label>
                         <input
                             type="text"
                             name="jobTitle"
@@ -131,7 +125,6 @@
                     </div>
 
                     <div class="form-group">
-                    <label for="secretary">Secretaria: </label>
                         <input
                             type="text"
                             name="secretary"
@@ -143,7 +136,6 @@
                     </div>
 
                     <div class="form-group">
-                    <label for="email">Supervisor: </label>
                         <input
                             type="text"
                             name="supervisor"
@@ -155,7 +147,6 @@
                     </div>
 
                     <div class="form-group">
-                    <label for="project">Proyecto: </label>
                         <input
                             type="text"
                             name="project"
@@ -167,7 +158,6 @@
                     </div>
                                                                               
                     <div class="form-group">
-                    <label for="program">Codigo de la foto: </label>
                         <input
                             type="text"
                             name="photoCode"
@@ -178,7 +168,6 @@
                             required>
                     </div>
                     <div class="form-group">
-                    <label for="dependency">Tipo de carné: </label>
                         <input
                             type="text"
                             name="carnetType"

@@ -15,7 +15,7 @@
     </div>
 
     <div class="container p-4 text-center">
-    <form action ="form_contractor.php"  method="POST">
+    <form action ="form_contratista.php"  method="POST">
     <input type = "submit" name= "login" value = "formulario Contratista"  style="background-color:#DCDCDC; border-color:black; color:black"  class="btn btn-lg"></input>
     </form>
     </div>
