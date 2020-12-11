@@ -34,10 +34,12 @@
     </div>
 
     <div class="container p-4 text-center">
-    <form action ="print_carnet.php"  method="POST" >
-    <input type = "submit" name= "print" value = "imprimir carné"  style="background-color:#DCDCDC; border-color:black; color:black"  class="btn btn-lg "></input>
+    <form action ="index.php"  method="POST" >
+    <input type = "submit" name= "list" value = "Cerrar seccion"  style="background-color:#DCDCDC; border-color:black; color:black"  class="btn btn-lg "></input>
     </form>
     </div>
+
+   
 
 
 <?php

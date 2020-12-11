@@ -18,11 +18,26 @@
             $id = $row['Identification'];
             $name = $row['Name'];
             $lastname = $row['LastName'];
-            $secretary = $row['Secretary'];
-            $phone = $row['Phone'];
             $email = $row['Email'];
-            $project = $row['Project'];
+            $phone = $row['Phone'];
             $job_title = $row['JobTitle'];
+            $secretary = $row['Secretary'];
+            $supervisor = $row['Supervisor'];
+            $project = $row['Project'];
+            $photoCode = $row['PhotoCode'];
+            $carnetType = $row['CarnetType'];
+            $Cost = $row['Cost'];
+            $paymethod = $row['PayMethod'];
+            $payStatus = $row['PayStatus'];
+            $attentionDateTime = $row['AttentionDateTime'];
+            $photoDate = $row['PhotoDate'];
+            $elaborationDate = $row['ElaborationDate'];
+            $deliveryDate = $row['DeliveryDate'];
+            $expirationDate = $row['ExpirationDate'];
+            $carnetStatus = $row['CarnetStatus'];
+            $observation = $row['Observations'];
+
+
         }
     }
     
@@ -78,30 +93,19 @@
                             style = "resize:none;"
                             required>
                     </div>
+
                     <div class="form-group">
-                    <label for="secretary">Secretaria: </label>
+                    <label for="lastname">Email: </label>
                         <input
-                            type="text"
-                            name="secretary"
+                            type="email"
+                            name="email"
                             class="form-control"
-                            value="<?php echo $secretary?>"
-                            placeholder="Secretaría"
+                            value= "<?php echo $email?>"
+                            placeholder="Email"
                             style = "resize:none;"
                             required>
                     </div>
-                    <!-- <div class="form-group">
-                    <label for="contract_expiration">Fecha de vencimiento: </label>
-                        <input
-                            type="text"
-                            name="contract_expiration"
-                            class="form-control"
-                            value="<?php echo $contract_expiration?>"
-                            placeholder="Fecha de expiración del contrato"
-                            onfocus="(this.type='date')"
-                            onfocusout="(this.type='text')"
-                            style = "resize:none;"
-                            required>
-                    </div> -->
+
                     <div class="form-group">
                     <label for="phone">Telefono: </label>
                         <input
@@ -113,28 +117,43 @@
                             style = "resize:none;"
                             >
                     </div>
+
                     <div class="form-group">
-                    <label for="email">Correo: </label>
+                    <label for="email">Cargo: </label>
                         <input
-                            type="email"
-                            name="email"
+                            type="text"
+                            name="jobTitle"
                             class="form-control"
-                            value="<?php echo $email?>"
-                            placeholder="Correo electrónico"
+                            value="<?php echo $job_title?>"
+                            placeholder="Cargo"
                             style = "resize:none;"
                             required>
                     </div>
-                    <!-- <div class="form-group">
-                    <label for="contract_supervisor">Supervisor de contrato: </label>
+
+                    <div class="form-group">
+                    <label for="secretary">Secretaria: </label>
                         <input
                             type="text"
-                            name="contract_supervisor"
+                            name="secretary"
                             class="form-control"
-                            value="<?php //echo $contract_supervisor?>"
-                            placeholder="Supervisor de contrato"
+                            value="<?php echo $secretary?>"
+                            placeholder="Secretaría"
                             style = "resize:none;"
                             required>
-                    </div> -->
+                    </div>
+
+                    <div class="form-group">
+                    <label for="email">Supervisor: </label>
+                        <input
+                            type="text"
+                            name="supervisor"
+                            class="form-control"
+                            value="<?php echo $supervisor?>"
+                            placeholder="Supervisor"
+                            style = "resize:none;"
+                            required>
+                    </div>
+
                     <div class="form-group">
                     <label for="project">Proyecto: </label>
                         <input
@@ -146,56 +165,160 @@
                             style = "resize:none;"
                             required>
                     </div>
-                    <!-- <div class="form-group">
-                    <label for="program">Programa: </label>
+                                                                              
+                    <div class="form-group">
+                    <label for="program">Codigo de la foto: </label>
                         <input
                             type="text"
-                            name="program"
+                            name="photoCode"
                             class="form-control"
-                            value="<?php echo $program?>"
-                            placeholder="Programa o convenio"
+                            value="<?php echo $photoCode?>"
+                            placeholder="Codigo de la foto"
                             style = "resize:none;"
                             required>
-                    </div> -->
-                    <!-- <div class="form-group">
-                    <label for="dependency">Dependencia: </label>
+                    </div>
+                    <div class="form-group">
+                    <label for="dependency">Tipo de carné: </label>
                         <input
                             type="text"
-                            name="dependency"
+                            name="carnetType"
                             class="form-control"
-                            value="<?php echo $dependency?>"
-                            placeholder="Dependencia"
+                            value="<?php echo $carnetType?>"
+                            placeholder="Tipo de carné"
                             style = "resize:none;"
                             required>
-                    </div> -->
-                    <!-- <div class="form-group">
-                        <label for="job_title">Cargo: </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="job_title">Costo: </label>
                         <input
                             type="text"
-                            name="job_title"
+                            name="cost"
                             class="form-control"
-                            value="<?php echo $job_title?>"
-                            placeholder="Cargo"
+                            value="<?php echo $Cost?>"
+                            placeholder="Costo"
                             style = "resize:none;"
                             required>
-                    </div> -->
-                    <!-- <div class="form-group">
-                    <label for="type_of_bonding">Tipo de vinculacion: </label>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="type_of_bonding">Metodo de pago: </label>
                         <input
                             type="text"
-                            name="type_of_bonding"
+                            name="payMethod"
                             class="form-control"
-                            value="<?php echo $type_of_bonding?>"
+                            value="<?php echo $paymethod?>"
+                            placeholder="Metodo de pago"
+                            style = "resize:none;"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="type_of_bonding">Estado del pago: </label>
+                        <input
+                            type="text"
+                            name="payStatus"
+                            class="form-control"
+                            value="<?php echo $payStatus?>"
                             placeholder="Tipo de vinculación"
                             style = "resize:none;"
                             required>
-                    </div> -->
+                    </div>
 
+                    <div class="form-group">
+                    <label for="type_of_bonding">Fecha de la atención: </label>
+                        <input
+                            type="date"
+                            name="attentionDate"
+                            class="form-control"
+                            value="<?php echo $attentionDateTime?>"
+                            placeholder="Tipo de vinculación"
+                            onfocus="(this.type='date')"
+                            onfocusout="(this.type='text')"
+                            style = "resize:none;"
+                            required>
+                    </div>
 
+                    <div class="form-group">
+                    <label for="contract_expiration">Fecha de la foto: </label>
+                        <input
+                            type="text"
+                            name="photoDate"
+                            class="form-control"
+                            value="<?php echo $photoDate?>"
+                            placeholder="Fecha de la foto"
+                            onfocus="(this.type='date')"
+                            onfocusout="(this.type='text')"
+                            style = "resize:none;"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="contract_supervisor">Fecha de elaboración: </label>
+                        <input
+                            type="date"
+                            name="elaborationDate"
+                            class="form-control"
+                            value="<?php echo $elaborationDate?>"
+                            placeholder="Fecha de elaboración"
+                            onfocus="(this.type='date')"
+                            onfocusout="(this.type='text')"
+                            style = "resize:none;"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="contract_supervisor">Fecha de entrega: </label>
+                        <input
+                            type="date"
+                            name="deliveryDate"
+                            class="form-control"
+                            value="<?php echo $elaborationDate?>"
+                            placeholder="Fecha de entrega"
+                            onfocus="(this.type='date')"
+                            onfocusout="(this.type='text')"
+                            style = "resize:none;"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="contract_supervisor">Fecha de vencimiento: </label>
+                        <input
+                            type="date"
+                            name="expirationDate"
+                            class="form-control"
+                            value="<?php echo $expirationDate?>"
+                            placeholder="Fecha de vencimiento"
+                            onfocus="(this.type='date')"
+                            onfocusout="(this.type='text')"
+                            style = "resize:none;"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="contract_supervisor">Estado del carné: </label>
+                        <input
+                            type="text"
+                            name="carnetStatus"
+                            class="form-control"
+                            value="<?php echo $carnetStatus?>"
+                            placeholder="Estado del carné"
+                            style = "resize:none;"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="contract_supervisor">Observaciones: </label>
+                        <input
+                            type="text"
+                            name="observation"
+                            class="form-control"
+                            value="<?php echo $observation?>"
+                            placeholder="Estado del carné"
+                            style = "resize:none;"
+                            required>
+                    </div>
 
                     <input type="submit" class="btn btn-light  btn-block" name="update" value="Guardar"></input>
-                    <!-- se agregan como links las opciones de editar y eliminar desde  -->
-                    <!-- <a href="edit_registry.php?id=<?php echo $id?>" class="btn btn-light btn-block" title="Editar">Editar</a>                    -->
                     <a href="delete_contractor.php?id=<?php echo $id?>" class="btn btn-light btn-block" title="Eliminar">Eliminar</a>
                 </form>
             </div>
