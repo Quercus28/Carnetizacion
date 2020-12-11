@@ -29,7 +29,7 @@
 
                         <div class="form-group">
                             <label for="email">Correo Electrónico*</label>
-                            <input type="email" name="in_email" class="form-control" id="email" required>
+                            <input type="email" name="in_email" class="form-input" id="email" required>
                         </div>
 
 
@@ -46,7 +46,7 @@
                             <label for="">- En caso de que desee y autorice usar la foto del año actual, elija la opción
                                 "NO"*</label>
                         </div>
-                        <!--falta revisar este selec nuevo-->
+                        <!--falta revisar este selec nuevo,(deben meter en costo el valor de solo carnet 5000 o de carnet completo 6000) -->
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="tipo">Tipo de carnet que desea*</label>
@@ -76,30 +76,29 @@
                                 <input type="number" name="in_identification" class="form-input" required>
                                 <label for="Cedula">Sin espacios; comas ni puntos*</label>
                             </div>
-                            <!-- <div class="form-group">
-                                <label for="Telefono">Número de telefónico de contacto.*</label>
-                                <input type="text" class="form-input" name="Telefono" id="caja" />
-                                <label for="Telefono">- Celular*</label>
-                            </div>-->
+
                             <div class="form-group">
                                 <label for="in_phone">Número de telefónico de contacto.*</label>
                                 <input type="number" name="in_phone" class="form-input" id="caja" required>
                                 <label for="in_phone">- Celular*</label>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <input type="text" name="in_name" class="form-control" placeholder="Nombres"
-                                style="resize:none;" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Nombres">Nombres*</label>
+                                <input type="text" name="in_name" class="form-input" id="caja" style="resize:none;"
+                                    required>
+                                <label for="">- Nombre y Apellidos completos, usando mayusculas iniciales. como desea
+                                    que aparezca en el carné.*</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="Apellidos">Apellidos*</label>
+                                <input type="text" name="in_lastname" class="form-input" id="caja" style="resize:none;"
+                                    required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="text" name="in_lastname" class="form-control" placeholder="Apellidos"
-                                style="resize:none;" required>
-                        </div>
 
-
-
-
-
+                        <!--hay que revisar este selec box-->
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="tipo">Cargo*</label>
@@ -157,6 +156,8 @@
                                 </div>
                             </div>
 
+
+                            <!--hay que revisar este selec box-->
                             <div class="form-group">
                                 <label for="tipo">Secretaría*</label>
                                 <div class="select-list1">
