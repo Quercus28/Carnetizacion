@@ -22,14 +22,14 @@
         $photoDate = $_POST['in_photoDate']; 
         $elaborationDate = $_POST['in_elabotarionDate']; 
         $deliveryDate = $_POST['in_deliveryDate'];
-        $deliveryDate = $_POST['in_ExpirationDate'];
+        $expirationDate = $_POST['in_ExpirationDate'];
         $carnet_status = $_POST['in_status']; 
         $deliveryDate = $_POST['in_observation'];
 
 
-        $query = "INSERT INTO contractor (Identification, Name, LastName, Email, Phone, JobTitle, Secretary, Project, PhotoCode, CarnetType, Cost, PayMethod, PayStatus, CarnetStatus) VALUES ('$identification', '$name',
-        '$lastname', '$email', '$phone', '$job_title', '$secretary', '$project', '$photo_code', '$carnet_type', '$cost',
-        '$pay_method', '$pay_status', '$carnet_status')";
+        $query = "INSERT INTO contractor (Identification, Name, LastName, Email, Phone, JobTitle, Secretary, Project, PhotoCode, CarnetType, Supervisor, Cost, PayMethod, PayStatus, CarnetStatus, ExpirationDate) VALUES ('$identification', '$name',
+        '$lastname', '$email', '$phone', '$job_title', '$secretary', '$project', '$photo_code', '$carnet_type', '$supervisor', '$cost',
+        '$pay_method', '$pay_status', '$carnet_status', '$expirationDate')";
         var_dump($query);
 
         $result = mysqli_query($conn, $query);
@@ -43,7 +43,7 @@
         $_SESSION['message'] = 'El registro se ha guardado con éxito';
         $_SESSION['message_type'] = 'success';
 
-        header('Location: form_contractor.php');
+        header('Location: form_contratista.php');
         exit();
     }
 

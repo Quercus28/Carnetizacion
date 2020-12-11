@@ -6,9 +6,11 @@
 <div class="main">
     <section class="signup">
         <div class="container">
+
             <h2 class="form-title" style="text-align: center">
                 Contratista
             </h2>
+
             <div>
                 <div class="signup-form">
                     <div class="col-mod-4">
@@ -187,45 +189,39 @@
                             >
                         </div>
                         <input type="submit" class="btn btn-primary  btn-block" name="save" value="Guardar"></input>
-<!-- se agrega el boton para salir al menu principal -->
-                        <!-- <form action ="indexlog.php" method="POST" class= "text-center ">
-                            <input type = "submit" class="btn btn-light btn-block" name= "ppal" value = "Volver al menú principal"  style="color:black"></input>
-                        </form> -->
-<!-- cierre del boton para salir al menu principal -->
                         <div class="signup-image">
                             <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
                          </div>
+
                     </form>
+                    <!-- boton para salir del formulario -->
+                    <?php
+                                if(isset($_POST['nologin'])) {?>
+                                   
+                                            <div class="col-mod-4">
+                                                <form action ="index.php" method="POST" class= "text-center ">
+                                                    <input type = "submit" class="btn btn-light btn-block" name= "ppal" value = "Volver al menú principal"
+                                                    style="color:black"></input>
+                                                </form>
+                                            
+                                    </div>
+
+                                <?php } else {?>
+                                        
+                                                <div class="col-mod-4">
+                                                    <form action ="indexlog.php" method="POST" class= "text-center ">
+                                                        <input type = "submit" class="btn btn-light btn-block" name= "ppal" value = "Volver al menú principal"
+                                                        style="color:black"></input>
+                                                    </form>
+                                                </div>
+                                            
+                                <?php }?>
+                            <!-- cierre del boton para salir del formulario -->
                 </div>
             </div>        
         </div>
     </section>          
 </div>
 
-<?php
-    if(isset($_POST['nologin'])) {?>
-        <div class="container p-4">
-            <div class="roow">
-                <div class="col-mod-4">
-                    <form action ="index.php" method="POST" class= "text-center ">
-                        <input type = "submit" class="btn btn-light btn-block" name= "ppal" value = "Volver al menú principal"
-                        style="color:black"></input>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-<?php } else {?>
-        <div class="container p-4">
-            <div class="roow">
-                <div class="col-mod-4">
-                    <form action ="indexlog.php" method="POST" class= "text-center ">
-                        <input type = "submit" class="btn btn-light btn-block" name= "ppal" value = "Volver al menú principal"
-                        style="color:black"></input>
-                    </form>
-                </div>
-            </div>
-        </div>
-<?php }?>
 
 <?php include("includes/footer.php") ?>
