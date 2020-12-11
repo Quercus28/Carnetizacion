@@ -105,12 +105,36 @@
                                         <option value="copiacompleto">Copia de carnet, porta - carnet y cinta</option>
                                 </select>
                         </div>
+                        <h5>Método de pago</h5>
+                        <div class="form-group ">
+                                <select name="in_pay_method" class="form-control" style = "resize:none;"  required>
+                                    <option selected><b>Seleccione una opción</b></option>
+                                        <option value="consignación">consignación</option>
+                                        <option value="tarjeta de credito">tarjeta de credito</option>
+                                        <option value="tarjeta debito">tarjeta debito</option>
+                                        <option value="efectivo">efectivo</option>
+                                </select>
+                        </div>
+                        <h5>Costo</h5>
+                        <div class="form-group">
+                            <label for="costo">
+                                <i class="zmdi zmdi-money material-icons-name">
+                                </i>
+                            </label>
+                            <input
+                                type="number"
+                                id="costo"
+                                name="in_cost"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
                         <h5>¿Desea tomarse una foto?</h5>
                         <div class="form-group ">
-                            <select name="foto" class="form-control" style = "resize:none;"  required>
+                            <select name="in_photo_code" class="form-control" style = "resize:none;"  required>
                             <option selected><b>Seleccione una opción</b></option>
-                                    <option value="si">Sí</option>
-                                    <option value="no">No</option>
+                                    <option value="C">Sí</option>
+                                    <option value="FA">No</option>
                             </select>
                         </div>
                         <h5>Secretaría</h5>
@@ -197,30 +221,30 @@
                     <!-- boton para salir del formulario -->
                     <?php
                                 if(isset($_POST['nologin'])) {?>
-                                   
+
                                             <div class="col-mod-4">
                                                 <form action ="index.php" method="POST" class= "text-center ">
                                                     <input type = "submit" class="btn btn-light btn-block" name= "ppal" value = "Volver al menú principal"
                                                     style="color:black"></input>
                                                 </form>
-                                            
+
                                     </div>
 
                                 <?php } else {?>
-                                        
+
                                                 <div class="col-mod-4">
                                                     <form action ="indexlog.php" method="POST" class= "text-center ">
                                                         <input type = "submit" class="btn btn-light btn-block" name= "ppal" value = "Volver al menú principal"
                                                         style="color:black"></input>
                                                     </form>
                                                 </div>
-                                            
+
                                 <?php }?>
                             <!-- cierre del boton para salir del formulario -->
                 </div>
-            </div>        
+            </div>
         </div>
-    </section>          
+    </section>
 </div>
 
 

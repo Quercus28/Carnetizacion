@@ -6,7 +6,7 @@
 
     if (isset($_GET['id']))
     {
-        $id = $_GET['id'];      
+        $id = $_GET['id'];
 
         $query = "SELECT * FROM contractor WHERE Identification = $id";
         $result = mysqli_query($conn, $query);
@@ -40,8 +40,8 @@
 
         }
     }
-    
- 
+
+
 ?>
 
 <?php
@@ -51,7 +51,7 @@
 
 <div class="main">
     <section class="signup">
-        <div class="container">    
+        <div class="container">
 
             <div>
                 <div class="signup-form">
@@ -71,7 +71,7 @@
                                             style = "resize:none;">
                                 </div>
                                 <h5>Nombres</h5>
-                                <div 
+                                <div
                                 class="form-group">
                                 <label for="nombre">
                                 <i class="zmdi zmdi-account material-icons-name">
@@ -145,7 +145,7 @@
                                 <label for="nombre">
                                 <i class="zmdi zmdi-account material-icons-name">
                                 </i>
-                                </label>    
+                                </label>
                                     <input
                                         type="text"
                                         name="secretary"
@@ -194,7 +194,7 @@
                                         placeholder="Codigo de la foto"
                                         style = "resize:none;">
                                 </div>
-                                
+
                                 <h5>Tipo de carné</h5>
                                 <div class="form-group">
                                 <label for="nombre">
@@ -358,37 +358,41 @@
                                         style = "resize:none;">
                                 </div>
                                 <input type="submit" class="btn btn-light  btn-block" name="update" value="Guardar"></input>
-                                <a href="delete_contractor.php?id=<?php echo $id?>" class="btn btn-light btn-block" title="Eliminar">Eliminar</a>
                             </form>
+
+
+
+                            <!-- cierre boton de devolver a listar -->
+                            <!-- opcion de carga de imagen-->
+                            <div>
+                                <form action="upload.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
+                                    <input type="file" name="image"/>
+                                    <button type="submit" >Subir imagen</button>
+                            </form>
+                            </div>
+
                             <!-- boton de devolver a listar -->
-                            
+
+                            <a href="delete_contractor.php?id=<?php echo $id?>" class="btn btn-light btn-block" title="Eliminar">Eliminar</a>
+
                     <div class="col-mod-4">
                         <form action ="listar_contractor.php" method="POST" class= "register-form">
                             <input type = "submit" class="btn btn-light btn-block" name= "ppal" value = "Volver al listado"
                             style="color:black"></input>
                         </form>
                     </div>
-                
-            <!-- cierre boton de devolver a listar -->
-            <!-- opcion de carga de imagen-->
-            <div>
-    <form action="upload.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
-        <input type="file" name="image"/>
-        <button type="submit" >Subir imagen</button>
-    </form>
-</div>
 
             <!-- cierre de opcion de imagen -->
-                    </div>        
+                    </div>
                 </div>
             </div>
-        </div>    
+        </div>
     </section>
 </div>
 
 
 
-               
+
 <br><br>
 
 
