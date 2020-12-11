@@ -16,8 +16,8 @@
         <div class="container-fluid">
             <div class="row" id="map_section">
                 <div class="col-4">
-                    <label for="formulario">Buscar usuario: </label>
-                    <input type="text" autocomplete="off" onkeyup="mostrarUsuario(this.value)" class="form-control my-2" name="formulario" id="formulario" placeholder = "  Identificación">
+                    <input type="text" autocomplete="off" onkeyup="mostrarUsuario(this.value)" class="form-control my-2" name="formulario"
+                    id="formulario" placeholder = "Buscar usuario">
                 </div>
             </div>
         </div>
