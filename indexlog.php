@@ -22,7 +22,7 @@
 
 
     <div class="container p-4 text-center">
-    <form action ="activo_carnet.php"  method="POST" >
+    <form action ="list_official.php"  method="POST" >
     <input type = "submit" name= "list" value = "Listar Funcionarios"  style="background-color:#DCDCDC; border-color:black; color:black"  class="btn btn-lg "></input>
     </form>
     </div>
