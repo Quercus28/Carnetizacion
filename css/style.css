@@ -201,13 +201,8 @@ body {
   font-family: Poppins; }
 
 .container {
-<<<<<<< HEAD
-  width:  20 auto;
-  height:  20 auto;
-=======
   margin-bottom: 30px;
   width: 900px;
->>>>>>> 8c29a8f8195625fba781f35c7a4c4c45fc644a18
   background: #fff;
   margin: 0 auto;
   box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
