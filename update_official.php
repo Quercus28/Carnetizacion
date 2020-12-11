@@ -23,8 +23,8 @@
         $observations = $_POST['observations'];
 
         $query = "UPDATE official SET Identification = '$id', Name = '$name', LastName = '$lastname',
-        Email = '$email', Phone = '$phone', JobTitle = '$jobTitle', Secretary = '$secretary',
-        PhotoCode = '$photoCode', CarnetType = '$carnetType', Cost = '$cost', PayMethod = '$pay_method',
+        Email = '$email', Phone = '$phone', JobTitle = '$job_title', Secretary = '$secretary',
+        PhotoCode = '$photo_code', CarnetType = '$carnet_type', Cost = '$cost', PayMethod = '$pay_method',
         PayStatus = '$pay_status', AttentionDateTime = '$attention_date_time', PhotoDate = '$photo_date',
         ElaborationDate = '$elaboration_date', DeliveryDate = '$delivery_date', CarnetStatus = '$carnet_status',
         Observations = '$observations' WHERE Identification = '$id'";

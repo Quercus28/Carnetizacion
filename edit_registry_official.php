@@ -5,13 +5,11 @@
     {
         $id = $_GET['id'];
 
-        $query = "SELECT * FROM official WHERE Identification = $id";
+        $query = "SELECT * FROM official WHERE Identification = '$id'";
         $result = mysqli_query($conn, $query);
-
         if(mysqli_num_rows($result) == 1)
         {
             $row = mysqli_fetch_array($result);
-
             $id = $row['Identification'];
             $name = $row['Name'];
             $lastname = $row['LastName'];
@@ -39,216 +37,277 @@
 
 ?>
 
-    <header class="page-header font-small text-center pt-4 pb-3" style="background-color:#c79be0; color:white" >
-        <a> Nombre página </a>
-    </header>
-
-<div class="container p-4">
-    <div class="roow">
-        <div class="col-mod-4">
-            <div class="card card-body">
-                <form action="update_official.php?id=<?php echo $_GET['id'];?>" method="POST">
-                    <div class="form-group">
-                    <label for="name">Identificación: </label>
-                    <input
-                        textarea
-                            type="number"
-                            name="id"
-                            class="form-control"
-                            value="<?php echo $id?>"
-                            placeholder= "Identificación"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                    <label for="name">Nombre: </label>
-                    <input
-                        textarea
-                            type="text"
-                            name="name"
-                            class="form-control"
-                            value="<?php echo $name?>"
-                            placeholder= "Nombres"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                    <label for="lastname">Apellidos: </label>
-                        <input
-                            type="text"
-                            name="lastname"
-                            class="form-control"
-                            value= "<?php echo $lastname?>"
-                            placeholder="Apellidos"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                    <label for="email">Correo: </label>
-                        <input
-                            type="email"
-                            name="email"
-                            class="form-control"
-                            value="<?php echo $email?>"
-                            placeholder="Correo electrónico"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                    <label for="phone">Telefono: </label>
-                        <input
-                            type="number"
-                            name="phone"
-                            class="form-control"
-                            value="<?php echo $phone?>"
-                            placeholder="Número telefonico"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <label for="job_title">Cargo: </label>
-                        <input
-                            type="text"
-                            name="job_title"
-                            class="form-control"
-                            value="<?php echo $job_title?>"
-                            placeholder="Cargo"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                    <label for="secretary">Secretaria: </label>
-                        <input
-                            type="text"
-                            name="secretary"
-                            class="form-control"
-                            value="<?php echo $secretary?>"
-                            placeholder="Secretaría"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <label for="photo_code">Toma: </label>
-                        <input
-                            type="text"
-                            name="photo_code"
-                            class="form-control"
-                            value="<?php echo $photo_code?>"
-                            placeholder="Cargo"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                    <label for="carnet_type">Tipo de carnet: </label>
-                        <input
-                            type="text"
-                            name="carnet_type"
-                            class="form-control"
-                            value="<?php echo $carnet_type?>"
-                            placeholder="Elíja una opción"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                    <label for="cost">Costo: </label>
-                        <input
-                            type="number"
-                            name="cost"
-                            class="form-control"
-                            value="<?php echo $cost?>"
-                            placeholder="Valor"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                    <label for="pay_method">Método de pago: </label>
-                        <input
-                            type="text"
-                            name="pay_method"
-                            class="form-control"
-                            value="<?php echo $pay_method?>"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                    <label for="pay_status">Estado de pago: </label>
-                        <input
-                            type="text"
-                            name="pay_status"
-                            class="form-control"
-                            value="<?php echo $pay_status?>"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                    <label for="attention_date_time">Día y Hora de atención: </label>
-                        <input
-                            type="text"
-                            name="attention_date_time"
-                            class="form-control"
-                            value="<?php echo $attention_date_time?>"
-                            onfocus="(this.type='date')"
-                            onfocusout="(this.type='text')"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                    <label for="photo_date">Fecha en la que se capturó la foto: </label>
-                        <input
-                            type="text"
-                            name="photo_date"
-                            class="form-control"
-                            value="<?php echo $photo_date?>"
-                            onfocus="(this.type='date')"
-                            onfocusout="(this.type='text')"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                    <label for="delivery_date">Fecha de entrega: </label>
-                        <input
-                            type="text"
-                            name="delivery_date"
-                            class="form-control"
-                            value="<?php echo $delivery_date?>"
-                            onfocus="(this.type='date')"
-                            onfocusout="(this.type='text')"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                    <label for="carnet_status">Estado del carnet: </label>
-                        <input
-                            type="text"
-                            name="carnet_status"
-                            class="form-control"
-                            value="<?php echo $carnet_status?>"
-                            style = "resize:none;"
-                            required>
-                    </div>
-                    <div class="form-group">
-                    <label for="observations">Observaciones: </label>
-                        <input
-                            type="text"
-                            name="observations"
-                            class="form-control"
-                            value="<?php echo $observations?>"
-                            style = "resize:none;"
-                            required>
-                    </div>
-
-                    <input type="submit" class="btn btn-light  btn-block" name="update" value="Guardar"></input>
-                    <!-- se agregan como links las opciones de editar y eliminar desde  -->
-                    <!-- <a href="edit_registry.php?id=<?php echo $id?>" class="btn btn-light btn-block" title="Editar">Editar</a>                    -->
-                    <a href="delete_official.php?id=<?php echo $id?>" class="btn btn-light btn-block" title="Eliminar">Eliminar</a>
-                </form>
+    <div class="main">
+    <section class="signup">
+        <div class="container">
+            <h2 class="form-title" style="text-align: center">
+                Servidor Público
+            </h2>
+            <div>
+                <div class="signup-form">
+                    <form action="update_official.php?id=<?php echo $_GET['id'];?>" method="POST" class="register-form" id="register-form">
+                        <h5>Número de Identificación</h5>
+                        <div class="form-group">
+                            <label for="cc">
+                                <i class="zmdi zmdi-account-box material-icons-name"></i>
+                            </label>
+                            <input
+                                type="number"
+                                id="cc"
+                                name="id"
+                                value="<?php echo $id?>"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
+                        <h5>Nombres</h5>
+                        <div class="form-group">
+                            <label for="nombre">
+                                <i class="zmdi zmdi-account material-icons-name">
+                                </i>
+                            </label>
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="name"
+                                value="<?php echo $name?>"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
+                        <h5>Apellidos</h5>
+                        <div class="form-group">
+                            <label for="apellidos">
+                                <i class="zmdi zmdi-account-o material-icons-name">
+                                </i>
+                            </label>
+                            <input
+                                type="text"
+                                id = "apellidos"
+                                name="lastname"
+                                value= "<?php echo $lastname?>"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
+                        <h5>Correo Electrónico</h5>
+                        <div class="form-group">
+                            <label for="correo">
+                                <i class="zmdi zmdi-email material-icons-name">
+                                </i>
+                            </label>
+                            <input
+                                type="email"
+                                id = "correo"
+                                name="email"
+                                value="<?php echo $email?>"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
+                        <h5>Teléfono Celular</h5>
+                        <div class="form-group">
+                            <label for="celular">
+                                <i class="zmdi zmdi-phone material-icons-name">
+                                </i>
+                            </label>
+                            <input
+                                type="number"
+                                id="celular"
+                                name="phone"
+                                value="<?php echo $phone?>"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
+                        <h5>Secretaría</h5>
+                            <input
+                                type="text"
+                                id="secretaría"
+                                value="<?php echo $secretary?>"
+                                name="secretary"
+                                style = "resize:none;"
+                                required
+                            >
+                        <h5>Cargo</h5>
+                        <div class="form-group">
+                            <label for="cargo">
+                                <i class="zmdi zmdi-accounts-alt material-icons-name">
+                                </i>
+                            </label>
+                            <input
+                                type="text"
+                                id="cargo"
+                                name="job_title"
+                                value="<?php echo $job_title?>"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
+                        <h5>Código de la foto</h5>
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                id="codigo de la foto"
+                                name="photo_code"
+                                value="<?php echo $photo_code?>"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
+                        <h5>Opción de carnet</h5>
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                id="cargo"
+                                name="carnet_type"
+                                value="<?php echo $carnet_type?>"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
+                        <h5>Método de pago</h5>
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                id="metodo_de_pago"
+                                name="pay_method"
+                                value="<?php echo $pay_method?>"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
+                        <h5>Costo</h5>
+                        <div class="form-group">
+                            <label for="costo">
+                                <i class="zmdi zmdi-accounts-alt material-icons-name">
+                                </i>
+                            </label>
+                            <input
+                                type="number"
+                                id="costo"
+                                name="cost"
+                                value="<?php echo $cost?>"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
+                        <h5>Estado de pago</h5>
+                        <div class="form-group">
+                            <label for="costo">
+                                <i class="zmdi zmdi-accounts-alt material-icons-name">
+                                </i>
+                            </label>
+                            <input
+                                type="text"
+                                id="costo"
+                                name="pay_status"
+                                value="<?php echo $pay_status?>"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
+                        <h5>Día y Hora de atención</h5>
+                        <div class="form-group">
+                            <label for="costo">
+                                <i class="zmdi zmdi-accounts-alt material-icons-name">
+                                </i>
+                            </label>
+                            <input
+                                type="text"
+                                id="costo"
+                                name="attention_date_time"
+                                value="<?php echo $attention_date_time?>"
+                                onfocus="(this.type='date')"
+                                onfocusout="(this.type='text')"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
+                        <h5>Fecha en la que se capturó la foto</h5>
+                        <div class="text">
+                            <input
+                                type="text"
+                                id="costo"
+                                name="photo_date"
+                                value="<?php echo $photo_date?>"
+                                onfocus="(this.type='date')"
+                                onfocusout="(this.type='text')"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
+                        <h5>Fecha de elaboración del carnet</h5>
+                        <div class="text">
+                            <input
+                                type="text"
+                                id="costo"
+                                name="elaboration_date"
+                                value="<?php echo $photo_date?>"
+                                onfocus="(this.type='date')"
+                                onfocusout="(this.type='text')"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
+                        <h5>Fecha de entrega</h5>
+                        <div class="form-group">
+                            <label for="costo">
+                                <i class="zmdi zmdi-accounts-alt material-icons-name">
+                                </i>
+                            </label>
+                            <input
+                                type="text"
+                                id="delivery_date"
+                                name="delivery_date"
+                                value="<?php echo $delivery_date?>"
+                                onfocus="(this.type='date')"
+                                onfocusout="(this.type='text')"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
+                        <h5>Estado del carnet</h5>
+                        <div class="form-group">
+                            <label for="costo">
+                                <i class="zmdi zmdi-accounts-alt material-icons-name">
+                                </i>
+                            </label>
+                            <input
+                                type="text"
+                                id="costo"
+                                name="carnet_status"
+                                value="<?php echo $carnet_status?>"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
+                        <h5>Observaciones</h5>
+                        <div class="form-group">
+                            <label for="costo">
+                                <i class="zmdi zmdi-accounts-alt material-icons-name">
+                                </i>
+                            </label>
+                            <input
+                                type="text"
+                                id="costo"
+                                name="observations"
+                                value="<?php echo $observations?>"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
+                        <input type="submit" class="btn btn-primary  btn-block" name="update" value="Guardar"></input>
+                        <a href="delete_official.php?id=<?php echo $id?>" class="btn btn-light btn-block" title="Eliminar">Eliminar</a>
+                        <div class="signup-image">
+                            <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="col-mod-4">
-        </div>
-    </div>
+    </section>
 </div>
-
 <div>
     <form action="upload.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
         <input type="file" name="image"/>
@@ -260,9 +319,6 @@
     <input type = "submit" name= "ppal" value = "Volver al listado"  style="color:black"></input>
     </form><br><br><br><br><br><br><br>
 
-
-
 <?php
-
     include("includes/footer.php");
 ?>

@@ -22,6 +22,19 @@
                         <?php } ?>
                     </div>
                     <form action="save_official.php" method="POST" class="register-form" id="register-form">
+                        <h5>Número de Identificación</h5>
+                        <div class="form-group">
+                            <label for="cc">
+                                <i class="zmdi zmdi-account-box material-icons-name"></i>
+                            </label>
+                            <input
+                                type="number"
+                                id="cc"
+                                name="in_identification"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
                         <h5>Nombres</h5>
                         <div class="form-group">
                             <label for="nombre">
@@ -46,19 +59,6 @@
                                 type="text"
                                 id = "apellidos"
                                 name="in_lastname"
-                                style = "resize:none;"
-                                required
-                            >
-                        </div>
-                        <h5>Número de Identificación</h5>
-                        <div class="form-group">
-                            <label for="cc">
-                                <i class="zmdi zmdi-account-box material-icons-name"></i>
-                            </label>
-                            <input
-                                type="number"
-                                id="cc"
-                                name="in_identification"
                                 style = "resize:none;"
                                 required
                             >
@@ -91,27 +91,9 @@
                                 required
                             >
                         </div>
-                        <h5>Opción de carnet</h5>
-                        <div class="form-group ">
-                                <select name="tipo" class="form-control" style = "resize:none;"  required>
-                                    <option selected><b>Seleccione una opción</b></option>
-                                        <option value="carnet">Solo carnet</option>
-                                        <option value="completo">Carnet, porta - carnet y cinta</option>
-                                        <option value="copia">Copia de solo carnet</option>
-                                        <option value="copiacompleto">Copia de carnet, porta - carnet y cinta</option>
-                                </select>
-                        </div>
-                        <h5>¿Desea tomarse una foto?</h5>
-                        <div class="form-group ">
-                            <select name="foto" class="form-control" style = "resize:none;"  required>
-                            <option selected><b>Seleccione una opción</b></option>
-                                    <option value="si">Sí</option>
-                                    <option value="no">No</option>
-                            </select>
-                        </div>
                         <h5>Secretaría</h5>
                         <div class="form-group">
-                            <select name="secretaria" class="form-control" style = "resize:none;" required>
+                            <select name="in_secretary" class="form-control" style = "resize:none;" required>
                                 <option selected><b>Seleccione una opción</b></option>
                                     <option value="app">Agencia APP</option>
                                     <option value="concejo">Concejo de Medellin</option>
@@ -151,38 +133,74 @@
                             <input
                                 type="text"
                                 id="cargo"
-                                name="in_position"
+                                name="in_job_title"
+                                style = "resize:none;"
+                                required
+                            >
+                        </div>
+                        <h5>¿Desea tomarse una foto?</h5>
+                        <div class="form-group ">
+                            <select name="in_photo_code" class="form-control" style = "resize:none;"  required>
+                            <option selected><b>Seleccione una opción</b></option>
+                                    <option value="C">Sí</option>
+                                    <option value="FA">No</option>
+                            </select>
+                        </div>
+                        <h5>Opción de carnet</h5>
+                        <div class="form-group ">
+                                <select name="in_carnet_type" class="form-control" style = "resize:none;"  required>
+                                    <option selected><b>Seleccione una opción</b></option>
+                                        <option value="carnet">Solo carnet</option>
+                                        <option value="completo">Carnet, porta - carnet y cinta</option>
+                                        <option value="copia">Copia de solo carnet</option>
+                                        <option value="copiacompleto">Copia de carnet, porta - carnet y cinta</option>
+                                </select>
+                        </div>
+                        <h5>Método de pago</h5>
+                        <div class="form-group ">
+                                <select name="in_pay_method" class="form-control" style = "resize:none;"  required>
+                                    <option selected><b>Seleccione una opción</b></option>
+                                        <option value="consignación">consignación</option>
+                                        <option value="tarjeta de credito">tarjeta de credito</option>
+                                        <option value="tarjeta debito">tarjeta debito</option>
+                                        <option value="efectivo">efectivo</option>
+                                </select>
+                        </div>
+                        <h5>Costo</h5>
+                        <div class="form-group">
+                            <label for="costo">
+                                <i class="zmdi zmdi-accounts-alt material-icons-name">
+                                </i>
+                            </label>
+                            <input
+                                type="number"
+                                id="costo"
+                                name="in_cost"
                                 style = "resize:none;"
                                 required
                             >
                         </div>
                         <input type="submit" class="btn btn-primary  btn-block" name="save" value="Guardar"></input>
-                        <form action ="index.php" method="POST" class= "text-center ">
-                            <input type = "submit" class="btn btn-light btn-block" name= "ppal" value = "Volver al menú principal"  style="color:black"></input>
-                        </form>
+                        <?php
+                            if(isset($_POST['nologin'])) {?>
+                                            <form action ="index.php" method="POST" class= "text-center ">
+                                                <input type = "submit" class="btn btn-light btn-block" name= "ppal"
+                                                value = "Volver al menú principal" style="color:black"></input>
+                                            </form>
+                        <?php } else {?>
+                                            <form action ="indexlog.php" method="POST" class= "text-center ">
+                                                <input type = "submit" class="btn btn-light btn-block" name= "ppal"
+                                                value = "Volver al menú principal" style="color:black"></input>
+                                            </form>
+                        <?php }?>
                         <div class="signup-image">
                             <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
-                         </div>
-                    </form>
-
-                </div>
-            </div>        
-        </div>
-    </section>          
-</div>
-
-<?php
-    /*if(isset($_POST['nologin'])) {?>
-        <div class="container p-4">
-            <div class="roow">
-                <div class="col-mod-4">
-                    <form action ="indexlog.php" method="POST" class= "text-center ">
-                        <input type = "submit" class="btn btn-light btn-block" name= "ppal" value = "Volver al menú principal"  style="color:black"></input>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
-
-<?php } */?>
+    </section>
+</div>
 
 <?php include("includes/footer.php") ?>
