@@ -12,6 +12,7 @@
             <div>
                 <div class="signup-form">
                     <div class="col-mod-4">
+
                         <?php if(isset($_SESSION['message'])) { ?>
                             <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                 <?= $_SESSION['message']  ?>
@@ -21,7 +22,8 @@
                             </div>
                         <?php } ?>
                     </div>
-                    <form action="save_official.php" method="POST" class="register-form" id="register-form">
+
+                    <form action="save_contractor.php" method="POST" class="register-form" id="register-form">
                         <h5>Nombres</h5>
                         <div class="form-group">
                             <label for="nombre">
@@ -93,7 +95,7 @@
                         </div>
                         <h5>Opción de carnet</h5>
                         <div class="form-group ">
-                                <select name="tipo" class="form-control" style = "resize:none;"  required>
+                                <select name="in_carnet_type" class="form-control" style = "resize:none;"  required>
                                     <option selected><b>Seleccione una opción</b></option>
                                         <option value="carnet">Solo carnet</option>
                                         <option value="completo">Carnet, porta - carnet y cinta</option>
@@ -111,7 +113,7 @@
                         </div>
                         <h5>Secretaría</h5>
                         <div class="form-group">
-                            <select name="secretaria" class="form-control" style = "resize:none;" required>
+                            <select name="in_secretary" class="form-control" style = "resize:none;" required>
                                 <option selected><b>Seleccione una opción</b></option>
                                     <option value="app">Agencia APP</option>
                                     <option value="concejo">Concejo de Medellin</option>
@@ -144,7 +146,7 @@
                         </div>
                         <h5>Proyecto</h5>
                         <div class="form-group">
-                            <label for="proyecto">
+                            <label for="in_project">
                                 <i class="zmdi zmdi-folder material-icons-name">
                                 </i>
                             </label>
@@ -158,7 +160,7 @@
                         </div>
                         <h5>Supervisor</h5>
                         <div class="form-group">
-                            <label for="supervisor">
+                            <label for="in_supervisor">
                                 <i class="zmdi zmdi-accounts-alt material-icons-name">
                                 </i>
                             </label>
@@ -179,20 +181,21 @@
                             <input
                                 type="date"
                                 id="fechaVencimiento"
-                                name="in_expiration_date"
+                                name="in_ExpirationDate"
                                 style = "resize:none;"
                                 required
                             >
                         </div>
                         <input type="submit" class="btn btn-primary  btn-block" name="save" value="Guardar"></input>
-                        <form action ="index.php" method="POST" class= "text-center ">
+<!-- se agrega el boton para salir al menu principal -->
+                        <!-- <form action ="indexlog.php" method="POST" class= "text-center ">
                             <input type = "submit" class="btn btn-light btn-block" name= "ppal" value = "Volver al menú principal"  style="color:black"></input>
-                        </form>
+                        </form> -->
+<!-- cierre del boton para salir al menu principal -->
                         <div class="signup-image">
                             <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
                          </div>
                     </form>
-
                 </div>
             </div>        
         </div>
@@ -200,17 +203,29 @@
 </div>
 
 <?php
-    /*if(isset($_POST['nologin'])) {?>
+    if(isset($_POST['nologin'])) {?>
         <div class="container p-4">
             <div class="roow">
                 <div class="col-mod-4">
-                    <form action ="indexlog.php" method="POST" class= "text-center ">
-                        <input type = "submit" class="btn btn-light btn-block" name= "ppal" value = "Volver al menú principal"  style="color:black"></input>
+                    <form action ="index.php" method="POST" class= "text-center ">
+                        <input type = "submit" class="btn btn-light btn-block" name= "ppal" value = "Volver al menú principal"
+                        style="color:black"></input>
                     </form>
                 </div>
             </div>
         </div>
 
-<?php } */?>
+<?php } else {?>
+        <div class="container p-4">
+            <div class="roow">
+                <div class="col-mod-4">
+                    <form action ="indexlog.php" method="POST" class= "text-center ">
+                        <input type = "submit" class="btn btn-light btn-block" name= "ppal" value = "Volver al menú principal"
+                        style="color:black"></input>
+                    </form>
+                </div>
+            </div>
+        </div>
+<?php }?>
 
 <?php include("includes/footer.php") ?>
