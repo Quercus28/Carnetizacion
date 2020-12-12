@@ -205,9 +205,11 @@
                                 </i>
                             </label>
                             <input
-                                type="date"
-                                id="fechaVencimiento"
+                                type="text"
+                                id="costo"
                                 name="in_ExpirationDate"
+                                onfocus="(this.type='date')"
+                                onfocusout="(this.type='text')"
                                 style = "resize:none;"
                                 required
                             >

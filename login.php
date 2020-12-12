@@ -1,21 +1,18 @@
 <?php
     include("includes/header.php");
-?>
-
-<?php
     if(isset($_POST['log']))
     {
         if ($_POST['password'] != "1234")
         {
 ?>
-            <script>
-                alert('La contraseña es incorrecta');
-            </script>
+        <?php header('Location: indexlog.php');
+        ?>
+
 <?php
         } else{
 ?>
-        <?php header('Location: indexlog.php');?>
-<?php       }
+        <?php header('Location:indexlog.php');
+       }
     }
 ?>
 
@@ -28,7 +25,7 @@
                 </figure>
             </div>
             <div class="spcpassword">
-                <form action="login.php" method="POST">
+                <form action="indexlog.php" method="POST">
                     <input
                         type="password"
                         name="password"

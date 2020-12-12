@@ -68,7 +68,7 @@
                                             name="id"
                                             value="<?php echo $id?>"
                                             placeholder="Tipo de vinculación"
-                                            style = "resize:none;">
+                                            style = "resize:none;" required>
                                 </div>
                                 <h5>Nombres</h5>
                                 <div
@@ -95,7 +95,7 @@
                                         name="lastname"
                                         value= "<?php echo $lastname?>"
                                         placeholder="Apellidos"
-                                        style = "resize:none;">
+                                        style = "resize:none;" required>
                                 </div>
                                 <h5>Correo Electrónico</h5>
                                 <div class="form-group">
@@ -108,7 +108,7 @@
                                         name="email"
                                         value= "<?php echo $email?>"
                                         placeholder="Email"
-                                        style = "resize:none;">
+                                        style = "resize:none;" required>
                                 </div>
 
                                 <h5>Teléfono Celular</h5>
@@ -123,7 +123,7 @@
                                         value="<?php echo $phone?>"
                                         placeholder="Número telefonico"
                                         style = "resize:none;"
-                                        >
+                                        required>
                                 </div>
 
                                 <h5>Cargo</h5>
@@ -137,7 +137,7 @@
                                         name="jobTitle"
                                         value="<?php echo $job_title?>"
                                         placeholder="Cargo"
-                                        style = "resize:none;">
+                                        style = "resize:none;" required>
                                 </div>
 
                                 <h5>Secretaría</h5>
@@ -151,7 +151,7 @@
                                         name="secretary"
                                         value="<?php echo $secretary?>"
                                         placeholder="Secretaría"
-                                        style = "resize:none;">
+                                        style = "resize:none;" required>
                                 </div>
 
                                 <h5>Supervisor</h5>
@@ -165,7 +165,7 @@
                                         name="supervisor"
                                         value="<?php echo $supervisor?>"
                                         placeholder="Supervisor"
-                                        style = "resize:none;">
+                                        style = "resize:none;" required>
                                 </div>
 
                                 <h5>Proyecto</h5>
@@ -179,7 +179,7 @@
                                         name="project"
                                         value="<?php echo $project?>"
                                         placeholder="Proyecto"
-                                        style = "resize:none;">
+                                        style = "resize:none;" required>
                                 </div>
                                                                                          <h5>Codigo de la foto</h5>
                                 <div class="form-group">
@@ -192,7 +192,7 @@
                                         name="photoCode"
                                         value="<?php echo $photoCode?>"
                                         placeholder="Codigo de la foto"
-                                        style = "resize:none;">
+                                        style = "resize:none;" required>
                                 </div>
 
                                 <h5>Tipo de carné</h5>
@@ -206,7 +206,7 @@
                                         name="carnetType"
                                         value="<?php echo $carnetType?>"
                                         placeholder="Tipo de carné"
-                                        style = "resize:none;">
+                                        style = "resize:none;" required>
                                 </div>
                                 <h5>Costo</h5>
                                 <div class="form-group">
@@ -219,7 +219,7 @@
                                         name="cost"
                                         value="<?php echo $Cost?>"
                                         placeholder="Costo"
-                                        style = "resize:none;">
+                                        style = "resize:none;" required>
                                 </div>
 
                                 <h5>Metodo de pago</h5>
@@ -233,7 +233,7 @@
                                         name="payMethod"
                                         value="<?php echo $paymethod?>"
                                         placeholder="Metodo de pago"
-                                        style = "resize:none;">
+                                        style = "resize:none;" required>
                                 </div>
 
                                 <h5>Estado de pago</h5>
@@ -247,7 +247,7 @@
                                         name="payStatus"
                                         value="<?php echo $payStatus?>"
                                         placeholder="Tipo de vinculación"
-                                        style = "resize:none;">
+                                        style = "resize:none;" required>
                                 </div>
 
                                 <h5>Dia de atencion</h5>
@@ -263,7 +263,7 @@
                                         placeholder="Tipo de vinculación"
                                         onfocus="(this.type='date')"
                                         onfocusout="(this.type='text')"
-                                        style = "resize:none;">
+                                        style = "resize:none;" required>
                                 </div>
 
                                 <h5>Fecha de la foto</h5>
@@ -279,7 +279,7 @@
                                         placeholder="Fecha de la foto"
                                         onfocus="(this.type='date')"
                                         onfocusout="(this.type='text')"
-                                        style = "resize:none;">
+                                        style = "resize:none;" required>
                                 </div>
 
                                 <h5>Fecha de elaboración</h5>
@@ -295,7 +295,7 @@
                                         placeholder="Fecha de elaboración"
                                         onfocus="(this.type='date')"
                                         onfocusout="(this.type='text')"
-                                        style = "resize:none;">
+                                        style = "resize:none;" required>
                                 </div>
 
                                 <h5>Fecha de entrega</h5>
@@ -311,7 +311,7 @@
                                         placeholder="Fecha de entrega"
                                         onfocus="(this.type='date')"
                                         onfocusout="(this.type='text')"
-                                        style = "resize:none;">
+                                        style = "resize:none;" required>
                                 </div>
 
                                 <h5>Fecha de vencimiento</h5>
@@ -327,7 +327,7 @@
                                         placeholder="Fecha de vencimiento"
                                         onfocus="(this.type='date')"
                                         onfocusout="(this.type='text')"
-                                        style = "resize:none;">
+                                        style = "resize:none;" required>
                                 </div>
 
                                 <h5>Estado del carné</h5>
@@ -341,7 +341,7 @@
                                         name="carnetStatus"
                                         value="<?php echo $carnetStatus?>"
                                         placeholder="Estado del carné"
-                                        style = "resize:none;">
+                                        style = "resize:none;" required>
                                 </div>
 
                                 <h5>Observación</h5>
@@ -355,7 +355,7 @@
                                         name="observation"
                                         value="<?php echo $observation?>"
                                         placeholder="Observación"
-                                        style = "resize:none;">
+                                        style = "resize:none;" required>
                                 </div>
                                 <input type="submit" class="btn btn-light  btn-block" name="update" value="Guardar"></input>
                             </form>
