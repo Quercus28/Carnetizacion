@@ -7,7 +7,7 @@
         $id = $_GET['id'];
 
 
-        $query = "DELETE FROM id15421000_empcarnet . official WHERE Identification = $id ";
+        $query = "DELETE FROM id15421000_id15421000_empcarnet . official WHERE Identification = $id ";
         $result = mysqli_query($conn, $query);
 
         if(!$result)

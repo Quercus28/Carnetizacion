@@ -37,6 +37,7 @@
                     <input type = "submit" name= "list" value = "Cerrar sesión"  class="btn"></input>
                 </form>
             </div>
+
         </div>
         <div class="imagen2">
             <figure>

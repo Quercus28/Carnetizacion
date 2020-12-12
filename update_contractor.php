@@ -27,7 +27,6 @@
 
         $query = "UPDATE contractor SET Identification = '$id', Name = '$name', LastName = '$lastname', Email = '$email', Phone = '$phone', JobTitle = '$jobTitle', Secretary = '$secretary', Supervisor = '$supervisor', Project =  '$project', PhotoCode = '$photoCode', CarnetType = '$carnetType', Cost = '$cost', PayMethod = '$payMethod', PayStatus = '$payStatus', AttentionDateTime = '$attentionDate', PhotoDate = '$photoDate', ElaborationDate = '$elaborationDate', DeliveryDate = '$deliveryDate', ExpirationDate = '$expirationDate', CarnetStatus = '$carnetStatus', Observations = '$observation'  WHERE Identification = '$id'";
 
-        var_dump($query);
 
         mysqli_query($conn, $query);
         header('Location:listar_contractor.php');

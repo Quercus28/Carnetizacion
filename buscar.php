@@ -5,55 +5,41 @@ include("BD/db.php");
 $nombre = $_GET['nombre'];
 $salida = "";
 
-
 if(!empty($nombre)){
      $persona = mysqli_real_escape_string($conn, $nombre);
 
-     $query = "SELECT * FROM reportes WHERE name LIKE '%".$persona."%' OR id LIKE '%".$persona."%' OR lastname LIKE '%".$persona."%' OR email LIKE '%".$persona."%'";
+     $query = "SELECT * FROM official WHERE Name LIKE '%".$persona."%' OR Identification LIKE '%".$persona."%' OR LastName LIKE '%".$persona."%' OR Email LIKE '%".$persona."%'";
 
      $resultad = $conn->query($query);
 
     if ($resultad->num_rows>0) {
-     $salida.="<h1 align='center' margin='20px' >Informacion encontrada</h1>";    
+     $salida.="<h1 align='center' margin='20px' >Informacion encontrada</h1>";
      $salida.="<table width='90%' border='1px' align='center'>
      <thead>
           <tr style='text-align: center;''>
+               <td>Cedula</td>
                <td>Nombre</td>
                <td>Apellidos</td>
-               <td>Cedula</td>
                <td>Correo</td>
                <td>Accion</td>
           </tr>
-
      </thead>
      <tbody>";
-    
 
      while($fila = $resultad->fetch_assoc()){
           $salida.="
                <tr>
-                <td style='text-align: center;'>".$fila['name']."</td>
-                <td style='text-align: center;'>".$fila['lastname']."</td>
-                <td style='text-align: center;'>".$fila['id']."</td>
-                <td style='text-align: center;'>".$fila['email']."</td>
-                <td style='text-align: center;'><a href='edit_registry.php?id=".$fila['id']."' class='btn btn-light' title='Editar'>Ver info</a></td>
-                
+                <td style='text-align: center;'>".$fila['Identification']."</td>
+                <td style='text-align: center;'>".$fila['Name']."</td>
+                <td style='text-align: center;'>".$fila['LastName']."</td>
+                <td style='text-align: center;'>".$fila['Email']."</td>
+                <td style='text-align: center;'><a href='edit_registry.php?id=".$fila['Identification']."' class='btn btn-light' title='Editar'>Ver info</a></td>
                </tr>";
      }
      $salida.="</tbody></table>";
-
      } else {
           $salida.="<h1 align='center' margin='20px' >Informacion no encontrada</h1>";
      }
-
-     // etiqueta 1: probar con la tabla contractor que genere la busqueda igual que con reportes
-          
-     // cierre de etiqueta 1
-
      echo $salida;
-
 }
-
-
-
 ?>

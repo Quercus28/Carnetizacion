@@ -1,14 +1,13 @@
 <?php
 
     include("BD/db.php");
-    // var_dump($_GET);
 
     if(isset($_GET['id']))
     {
         $id = $_GET['id'];
 
 
-        $query = "DELETE FROM id15421000_empcarnet . contractor WHERE Identification = $id";
+        $query = "DELETE FROM id15421000_id15421000_empcarnet.contractor WHERE Identification = $id";
         $result = mysqli_query($conn, $query);
 
         if(!$result)
