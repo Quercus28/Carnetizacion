@@ -160,11 +160,10 @@
                         <div class="form-group ">
                                 <select name="in_pay_method" class="form-control" style = "resize:none;"  required>
                                     <option selected><b>Seleccione una opción</b></option>
-                                        <option value="consignación">consignación</option>
-                                        <option value="tarjeta de credito">tarjeta de credito</option>
-                                        <option value="tarjeta debito">tarjeta debito</option>
-                                        <option value="efectivo">efectivo</option>
-                                </select>
+                                        <option value="consignación">Consignación</option>
+                                        <option value="tarjeta de credito">Tarjeta de crédito</option>
+                                        <option value="tarjeta debito">Tarjeta débito</option>
+                                        <option value="efectivo">Efectivo</option>
                         </div>
                         <h5>Costo</h5>
                         <div class="form-group">

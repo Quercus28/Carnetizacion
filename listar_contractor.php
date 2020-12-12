@@ -82,7 +82,7 @@ $result = mysqli_query($conn, $query);
                 <?php $id = $datos["Identification"]?>
                     <!-- se comenta la opcion de facturar de la vista de listar -->
                     <!-- <a href="bill_registry.php?id=<?php //echo $datos['Identification']?>" class="btn btn-light" title="Facturar">Facturar</a> -->
-                    <a href="edit_registry_contractor.php?id=<?php echo $datos['Identification']?>" class="btn btn-light" title="Editar">Ver info</a>
+                    <a href="edit_registry_contractor.php?id=<?php echo $datos['Identification']?>" class="btn btn-light" title="Editar">Ver</a>
                     
                 </td>
             </tr>

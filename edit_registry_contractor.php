@@ -57,6 +57,9 @@
                 <div class="signup-form">
                     <div class="col-mod-4">
                             <form class = "register-form" action="update_contractor.php?id=<?php echo $_GET['id'];?>" method="POST">
+                                <h2 class="form-title" style="text-align: center">
+                                    Contratista
+                                </h2>
                             <br>
                                 <h5>Identificación</h5>
                                 <div class="form-group">
@@ -168,7 +171,7 @@
                                         style = "resize:none;" required>
                                 </div>
 
-                                <h5>Proyecto</h5>
+                                <h5>Proyecto, Convenio o Programa</h5>
                                 <div class="form-group">
                                 <label for="in_project">
                                 <i class="zmdi zmdi-folder material-icons-name">
@@ -363,13 +366,13 @@
 
 
                             <!-- cierre boton de devolver a listar -->
-                            <!-- opcion de carga de imagen-->
+                            <!-- opcion de carga de imagen
                             <div>
                                 <form action="upload.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
                                     <input type="file" name="image"/>
                                     <button type="submit" >Subir imagen</button>
                             </form>
-                            </div>
+                            </div>-->
 
                             <!-- boton de devolver a listar -->
 

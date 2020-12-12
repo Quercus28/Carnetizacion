@@ -9,26 +9,26 @@
         <div class="btns">
             <div class="form-group form-buttom">
                 <form action ="form_servidor.php"  method="POST">
-                    <input type = "submit" name= "login" value = "formulario Funcionario" class="btn"></input>
+                    <input type = "submit" name= "login" value = "Formulario Funcionario" class="btn"></input>
                 </form>
             </div>
 
             <div class="form-group form-buttom">
                 <form action ="form_contratista.php"  method="POST">
-                    <input type = "submit" name= "login" value = "formulario Contratista" class="btn"></input>
+                    <input type = "submit" name= "login" value = "Formulario Contratista" class="btn"></input>
                 </form>
             </div>
 
 
             <div class="form-group form-buttom">
                 <form action ="list_official.php"  method="POST" >
-                    <input type = "submit" name= "list" value = "Listar Funcionarios" class="btn"></input>
+                    <input type = "submit" name= "list" value = "Listado de Funcionarios" class="btn"></input>
                 </form>
             </div>
 
             <div class="form-group form-buttom">
                 <form action ="listar_contractor.php"  method="POST" >
-                    <input type = "submit" name= "list" value = "Listar Contratistas" class="btn"></input>
+                    <input type = "submit" name= "list" value = "Listado de Contratistas" class="btn"></input>
                 </form>
             </div>
 
