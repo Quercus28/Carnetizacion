@@ -55,7 +55,7 @@ $result = mysqli_query($conn, $query);
                 <td style="text-align: center;"><?php echo $datos["Email"]?></td>
                 <td style="text-align: center;">
                     <!-- se comenta la opcion de facturar de la vista de listar -->
-                    <a href="edit_registry_official.php?id=<?php echo $datos['Identification']?>" class="btn btn-light" title="Editar">Ver info</a>
+                    <a href="edit_registry_official.php?id=<?php echo $datos['Identification']?>" class="btn btn-light" title="Editar">Ver</a>
                 </td>
             </tr>
             <?php

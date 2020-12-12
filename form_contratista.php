@@ -109,10 +109,10 @@
                         <div class="form-group ">
                                 <select name="in_pay_method" class="form-control" style = "resize:none;"  required>
                                     <option selected><b>Seleccione una opción</b></option>
-                                        <option value="consignación">consignación</option>
-                                        <option value="tarjeta de credito">tarjeta de credito</option>
-                                        <option value="tarjeta debito">tarjeta debito</option>
-                                        <option value="efectivo">efectivo</option>
+                                        <option value="consignación">Consignación</option>
+                                        <option value="tarjeta de credito">Tarjeta de crédito</option>
+                                        <option value="tarjeta debito">Tarjeta débito</option>
+                                        <option value="efectivo">Efectivo</option>
                                 </select>
                         </div>
                         <h5>Costo</h5>
@@ -170,7 +170,7 @@
                                     <option value="privada">Secretaría Privada</option>
                             </select>
                         </div>
-                        <h5>Proyecto</h5>
+                        <h5>Proyecto, Convenio o Programa</h5>
                         <div class="form-group">
                             <label for="in_project">
                                 <i class="zmdi zmdi-folder material-icons-name">
@@ -215,9 +215,6 @@
                             >
                         </div>
                         <input type="submit" class="btn btn-primary  btn-block" name="save" value="Guardar"></input>
-                        <div class="signup-image">
-                            <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
-                         </div>
 
                     </form>
                     <!-- boton para salir del formulario -->
@@ -243,6 +240,9 @@
 
                                 <?php }?>
                             <!-- cierre del boton para salir del formulario -->
+                            <div class="signup-image">
+                            <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
+                         </div>
                 </div>
             </div>
         </div>

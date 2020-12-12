@@ -36,7 +36,7 @@ if(!empty($nombre)){
                 <td style='text-align: center;'>".$fila['LastName']."</td>
                 <td style='text-align: center;'>".$fila['Identification']."</td>
                 <td style='text-align: center;'>".$fila['Email']."</td>
-                <td style='text-align: center;'><a href='edit_registry_contractor.php?id=".$fila['Identification']."' class='btn btn-light' title='Editar'>Ver info</a></td>
+                <td style='text-align: center;'><a href='edit_registry_contractor.php?id=".$fila['Identification']."' class='btn btn-light' title='Editar'>Ver</a></td>
                 
                </tr>";
      }

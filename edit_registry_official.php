@@ -121,7 +121,6 @@
                             >
                         </div>
                         <h5>Secretaría</h5>
-                            <input
                                 type="text"
                                 id="secretaría"
                                 value="<?php echo $secretary?>"

@@ -14,7 +14,7 @@
                 </form>
 
                 <form action="login.php" method="POST">
-                    <input type="submit" value="Ingresar como administrador" src="images/signup-image.jpg" alt="sing up image" class="btn"></input>
+                    <input type="submit" value="Ingreso como administrador" src="images/signup-image.jpg" alt="sing up image" class="btn"></input>
                 </form>
             </div>
         </div>

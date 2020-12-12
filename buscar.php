@@ -33,7 +33,7 @@ if(!empty($nombre)){
                 <td style='text-align: center;'>".$fila['Name']."</td>
                 <td style='text-align: center;'>".$fila['LastName']."</td>
                 <td style='text-align: center;'>".$fila['Email']."</td>
-                <td style='text-align: center;'><a href='edit_registry.php?id=".$fila['Identification']."' class='btn btn-light' title='Editar'>Ver info</a></td>
+                <td style='text-align: center;'><a href='edit_registry.php?id=".$fila['Identification']."' class='btn btn-light' title='Editar'>Ver</a></td>
                </tr>";
      }
      $salida.="</tbody></table>";
